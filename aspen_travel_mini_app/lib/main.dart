@@ -1,4 +1,4 @@
-import 'package:coffee_app/pages/app_main_screen.dart';
+import 'package:aspen_travel_mini_app/pages/splash_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -12,12 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        textTheme: GoogleFonts.soraTextTheme(),
-      ),
+      title: 'Aspen Travel',
       debugShowCheckedModeBanner: false,
-      home: const CoffeeAppMainScreen(),
+      theme: ThemeData(
+        useMaterial3: true,
+        textTheme: GoogleFonts.montserratTextTheme(),
+      ),
+      home: const SplashPage(),
     );
   }
 }
