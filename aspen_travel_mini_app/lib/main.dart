@@ -1,4 +1,4 @@
-import 'package:aspen_travel_mini_app/pages/splash_page.dart';
+import 'package:aspen_travel_mini_app/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         textTheme: GoogleFonts.montserratTextTheme(),
       ),
-      home: const SplashPage(),
+      home: const HomePage(),
     );
   }
 }
