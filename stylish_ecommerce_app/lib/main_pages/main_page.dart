@@ -1,7 +1,6 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
+import 'package:stylish_ecommerce_app/main_pages/favorite_page.dart';
+import 'package:stylish_ecommerce_app/main_pages/home_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -59,9 +58,9 @@ class _MainPageState extends State<MainPage> {
         onPageChanged: (index) {
           setState(() => _selectedPageIndex = index);
         },
-        children: const <Widget>[
-          Center(child: Text('Home Page')),
-          Center(child: Text('Wishlist Page')),
+        children: const [
+          FavoritePage(),
+          HomePage(),
           Center(child: Text('Search Page')),
           Center(child: Text('Settings Page')),
         ],

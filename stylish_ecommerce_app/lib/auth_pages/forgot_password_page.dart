@@ -45,7 +45,7 @@ class ForgotPasswordPage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             CustomButton(onTap: () {}, text: "Submit"),
           ],
         ),

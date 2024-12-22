@@ -17,7 +17,7 @@ class CustomSocialCircle extends StatelessWidget {
         ),
       ),
       child: CircleAvatar(
-        backgroundColor: Color(0xFFFCF3F6),
+        backgroundColor: const Color(0xFFFCF3F6),
         radius: 30,
         child: Image.asset(
           imagePath,
