@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:stylish_ecommerce_app/app_color.dart';
+import 'package:stylish_ecommerce_app/main_pages/detail_page.dart';
 import 'package:stylish_ecommerce_app/models/category.dart';
 import 'package:stylish_ecommerce_app/models/product.dart';
 import 'package:stylish_ecommerce_app/widgets/custom_info_button.dart';
@@ -176,7 +177,14 @@ class HomePage extends StatelessWidget {
                         offset: const Offset(-80, 0),
                         child: Padding(
                           padding: const EdgeInsets.only(right: 5.0),
-                          child: ProductCard(product: product),
+                          child: ProductCard(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => DetailPage(product: product,)));
+                              },
+                              product: product),
                         ),
                       );
                     },
@@ -300,7 +308,14 @@ class HomePage extends StatelessWidget {
                         offset: const Offset(-80, 0),
                         child: Padding(
                           padding: const EdgeInsets.only(right: 5.0),
-                          child: ProductCard(product: product),
+                          child: ProductCard(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => DetailPage(product: product,)));
+                              },
+                              product: product),
                         ),
                       );
                     },

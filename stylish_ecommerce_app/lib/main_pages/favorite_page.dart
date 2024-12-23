@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:stylish_ecommerce_app/models/product.dart';
 import 'package:stylish_ecommerce_app/widgets/custom_search_field.dart';
+import 'package:stylish_ecommerce_app/widgets/product_card.dart';
 import 'package:stylish_ecommerce_app/widgets/sort_filter_item.dart';
+
+import 'detail_page.dart';
 
 class FavoritePage extends StatelessWidget {
   const FavoritePage({super.key});
@@ -74,6 +78,31 @@ class FavoritePage extends StatelessWidget {
                       ],
                     )
                   ],
+                ),
+                const SizedBox(height: 10),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.7,
+                  child: GridView.builder(
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      childAspectRatio: 0.60,
+                    ),
+                    itemCount: listOfProducts.length,
+                    itemBuilder: (context, index) {
+                      final product = listOfProducts[index];
+                      return ProductCard(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => DetailPage(
+                                          product: product,
+                                        )));
+                          },
+                          product: product);
+                    },
+                  ),
                 ),
               ],
             ),
