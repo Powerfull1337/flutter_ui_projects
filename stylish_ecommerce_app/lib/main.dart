@@ -3,8 +3,7 @@ import 'package:stylish_ecommerce_app/app_color.dart';
 // import 'package:stylish_ecommerce_app/auth_pages/login_page.dart';
 //import 'package:stylish_ecommerce_app/splash_pages/onboarding_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:stylish_ecommerce_app/main_pages/checkout_page.dart';
-import 'package:stylish_ecommerce_app/main_pages/main_page.dart';
+import 'package:stylish_ecommerce_app/main_pages/shoping_bag_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +21,7 @@ class MyApp extends StatelessWidget {
           textTheme: GoogleFonts.montserratTextTheme(),
           inputDecorationTheme:
               const InputDecorationTheme(focusColor: AppColor.primaryColor)),
-      home: CheckoutPage(),
+      home: ShopingBagPage(),
     );
   }
 }

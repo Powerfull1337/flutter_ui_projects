@@ -160,7 +160,7 @@ class _DetailPageState extends State<DetailPage> {
                     ),
                     const SizedBox(width: 5),
                     Text(
-                      '₹${widget.product.originalPrice.toStringAsFixed(0)}',
+                      '\$${widget.product.originalPrice.toStringAsFixed(0)}',
                       style: const TextStyle(
                         decoration: TextDecoration.lineThrough,
                         fontSize: 14,
