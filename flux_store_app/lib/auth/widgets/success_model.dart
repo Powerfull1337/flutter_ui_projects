@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flux_store_app/auth/widgets/auth_button.dart';
-import 'package:flux_store_app/main/pages/home_page.dart';
+import 'package:flux_store_app/main/pages/main_page.dart';
 
 class SuccessModal extends StatelessWidget {
   const SuccessModal({super.key});
@@ -43,7 +43,7 @@ class SuccessModal extends StatelessWidget {
             width: double.infinity,
             onTap: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => HomePage()));
+                  context, MaterialPageRoute(builder: (context) => MainPage()));
             },
           )
         ],

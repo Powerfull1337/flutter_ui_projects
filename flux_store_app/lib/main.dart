@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flux_store_app/intro/pages/welcome_page.dart';
+import 'package:flux_store_app/main/pages/main_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.openSansTextTheme(),
       ),
       debugShowCheckedModeBanner: false,
-      home: const WelcomePage(),
+      home: const MainPage(),
     );
   }
 }
