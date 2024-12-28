@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flux_store_app/main/pages/home_page.dart';
-import 'package:flux_store_app/main/pages/search_page.dart';
+import 'package:flux_store_app/main/pages/discover_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -10,7 +10,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  int _selectedPageIndex = 1;
+  int _selectedPageIndex = 0;
 
   final _pageController = PageController();
   @override
@@ -23,7 +23,7 @@ class _MainPageState extends State<MainPage> {
         },
         children: [
           HomePage(),
-          SearchPage(),
+          DiscoverPage(),
           Center(
             child: Text("Child $_selectedPageIndex"),
           ),
