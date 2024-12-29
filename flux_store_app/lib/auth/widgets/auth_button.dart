@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 class AuthButton extends StatelessWidget {
   const AuthButton(
-      {super.key, required this.text, this.onTap, this.width = 150});
+      {super.key, required this.text, this.onTap, this.width = 150, this.color = const Color(0xFF2D201C)});
 
   final String text;
   final Function()? onTap;
-  final double? width;
-
+  final double? width;  
+  final Color color;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -17,7 +17,7 @@ class AuthButton extends StatelessWidget {
         height: 60,
         width: width,
         decoration: BoxDecoration(
-            color: Color(0xFF2D201C),
+            color: color,
             borderRadius: BorderRadius.circular(26.5)),
         child: Center(
           child: Text(
