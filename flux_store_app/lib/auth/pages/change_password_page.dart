@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flux_store_app/auth/widgets/auth_button.dart';
+import 'package:flux_store_app/auth/widgets/custmo_button.dart';
 import 'package:flux_store_app/auth/widgets/auth_field.dart';
 import 'package:flux_store_app/auth/widgets/success_model.dart';
 
@@ -65,7 +65,7 @@ class ChangePasswordPage extends StatelessWidget {
                 suffixIcon: Icon(Icons.visibility_off),
                 labelText: "Confrim Password"),
             SizedBox(height: 40),
-            AuthButton(
+            CustomButton(
                 text: "Confirm",
                 onTap: () {
                   showModalBottomSheet(

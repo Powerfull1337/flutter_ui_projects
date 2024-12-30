@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flux_store_app/auth/pages/login_page.dart';
-import 'package:flux_store_app/auth/widgets/auth_button.dart';
+import 'package:flux_store_app/auth/widgets/custmo_button.dart';
 import 'package:flux_store_app/auth/widgets/auth_field.dart';
 import 'package:flux_store_app/auth/widgets/social_circle.dart';
 
@@ -43,7 +43,7 @@ class RegisterPage extends StatelessWidget {
             SizedBox(height: 55),
             Align(
                 alignment: Alignment.center,
-                child: AuthButton(text: "SIGN UP")),
+                child: CustomButton(text: "SIGN UP")),
             SizedBox(height: 25),
             Align(
               alignment: Alignment.center,
@@ -70,7 +70,6 @@ class RegisterPage extends StatelessWidget {
               ],
             ),
             Spacer(),
-            
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

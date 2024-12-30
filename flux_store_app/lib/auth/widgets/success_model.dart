@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flux_store_app/auth/widgets/auth_button.dart';
+import 'package:flux_store_app/auth/widgets/custmo_button.dart';
 import 'package:flux_store_app/main/pages/main_page.dart';
 
 class SuccessModal extends StatelessWidget {
@@ -38,7 +38,7 @@ class SuccessModal extends StatelessWidget {
                 fontSize: 12, color: Colors.grey, fontWeight: FontWeight.w400),
           ),
           SizedBox(height: 30),
-          AuthButton(
+          CustomButton(
             text: "Browse home",
             width: double.infinity,
             onTap: () {

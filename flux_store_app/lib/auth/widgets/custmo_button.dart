@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 
-class AuthButton extends StatelessWidget {
-  const AuthButton(
-      {super.key, required this.text, this.onTap, this.width = 150, this.color = const Color(0xFF2D201C)});
+class CustomButton extends StatelessWidget {
+  const CustomButton(
+      {super.key,
+      required this.text,
+      this.onTap,
+      this.width = 150,
+      this.color = const Color(0xFF2D201C)});
 
   final String text;
   final Function()? onTap;
-  final double? width;  
+  final double? width;
   final Color color;
   @override
   Widget build(BuildContext context) {
@@ -17,8 +21,7 @@ class AuthButton extends StatelessWidget {
         height: 60,
         width: width,
         decoration: BoxDecoration(
-            color: color,
-            borderRadius: BorderRadius.circular(26.5)),
+            color: color, borderRadius: BorderRadius.circular(26.5)),
         child: Center(
           child: Text(
             text,

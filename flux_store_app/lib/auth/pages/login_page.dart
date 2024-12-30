@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flux_store_app/auth/pages/forgot_password_page.dart';
 import 'package:flux_store_app/auth/pages/register_page.dart';
-import 'package:flux_store_app/auth/widgets/auth_button.dart';
+import 'package:flux_store_app/auth/widgets/custmo_button.dart';
 import 'package:flux_store_app/auth/widgets/auth_field.dart';
 import 'package:flux_store_app/auth/widgets/social_circle.dart';
 
@@ -52,7 +52,8 @@ class LoginPage extends StatelessWidget {
             ),
             SizedBox(height: 55),
             Align(
-                alignment: Alignment.center, child: AuthButton(text: "LOG IN")),
+                alignment: Alignment.center,
+                child: CustomButton(text: "LOG IN")),
             SizedBox(height: 25),
             Align(
               alignment: Alignment.center,

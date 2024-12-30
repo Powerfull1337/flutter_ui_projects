@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flux_store_app/auth/widgets/auth_button.dart';
+import 'package:flux_store_app/auth/widgets/custmo_button.dart';
 
 import 'package:flux_store_app/main/models/product.dart';
 import 'package:flux_store_app/main/widgets/cart_item.dart';
@@ -62,8 +62,9 @@ class CartPage extends StatelessWidget {
                   boxShadow: [
                     BoxShadow(
                       color: Colors.black.withOpacity(0.2),
-                      blurRadius: 1,
-                      offset: Offset(0, 1),
+                      blurRadius: 10,
+                      spreadRadius: 1,
+                      offset: Offset(4, 4),
                     ),
                   ],
                 ),
@@ -136,7 +137,7 @@ class CartPage extends StatelessWidget {
                         ],
                       ),
                       SizedBox(height: 20),
-                      AuthButton(
+                      CustomButton(
                         text: "Procced to checkout",
                         width: double.infinity,
                         color: Color(0xFF343434),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flux_store_app/auth/pages/change_password_page.dart';
-import 'package:flux_store_app/auth/widgets/auth_button.dart';
+import 'package:flux_store_app/auth/widgets/custmo_button.dart';
 
 class VerificationCodePage extends StatefulWidget {
   const VerificationCodePage({super.key});
@@ -98,7 +98,7 @@ class _VerificationCodePageState extends State<VerificationCodePage> {
             ),
             SizedBox(height: 40),
             //Button for change password page
-            AuthButton(
+            CustomButton(
               text: "Go to change",
               onTap: () {
                 Navigator.push(

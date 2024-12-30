@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flux_store_app/auth/pages/verification_code_page.dart';
-import 'package:flux_store_app/auth/widgets/auth_button.dart';
+import 'package:flux_store_app/auth/widgets/custmo_button.dart';
 import 'package:flux_store_app/auth/widgets/auth_field.dart';
 
 class ForgotPasswordPage extends StatelessWidget {
@@ -61,7 +61,7 @@ class ForgotPasswordPage extends StatelessWidget {
             ),
             SizedBox(height: 40),
             //Button for verification page
-            AuthButton(
+            CustomButton(
               text: "Go to verify",
               onTap: () {
                 Navigator.push(
