@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flux_store_app/auth/widgets/custmo_button.dart';
+import 'package:flux_store_app/auth/widgets/custom_button.dart';
 import 'package:flux_store_app/main/pages/checkout_page_payment.dart';
 import 'package:flux_store_app/main/widgets/checkout_text_field.dart';
+import 'package:flux_store_app/main/widgets/tracker_checkout.dart';
 
 class CheckoutPageShipping extends StatefulWidget {
   const CheckoutPageShipping({super.key});
@@ -22,13 +23,36 @@ class _CheckoutPageShippingState extends State<CheckoutPageShipping> {
         backgroundColor: Colors.white,
         title: Text(
           "Checkout",
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
+            fontSize: 18,
+          ),
         ),
         centerTitle: true,
-        toolbarHeight: 100,
+        toolbarHeight: 90,
         leading: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 32),
-          child: Icon(Icons.arrow_back_ios, color: Colors.black),
+          padding: const EdgeInsets.only(left: 10),
+          child: GestureDetector(
+            onTap: () {},
+            child: Container(
+              height: 40,
+              width: 40,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.1),
+                    blurRadius: 10,
+                    spreadRadius: 1,
+                    offset: Offset(0, 4),
+                  ),
+                ],
+              ),
+              child: Icon(Icons.arrow_back_ios, color: Colors.black),
+            ),
+          ),
         ),
         elevation: 0,
       ),
@@ -38,57 +62,10 @@ class _CheckoutPageShippingState extends State<CheckoutPageShipping> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    Icons.location_on,
-                    color: Colors.black,
-                    size: 30,
-                  ),
-                  SizedBox(width: 8),
-                  ...List.generate(
-                      5,
-                      (index) => Padding(
-                            padding:
-                                const EdgeInsets.symmetric(horizontal: 4.0),
-                            child: Container(
-                              width: 6,
-                              height: 4,
-                              decoration: BoxDecoration(
-                                color: Colors.grey,
-                                shape: BoxShape.circle,
-                              ),
-                            ),
-                          )),
-                  SizedBox(width: 8),
-                  Icon(
-                    Icons.card_travel,
-                    color: Colors.grey,
-                    size: 30,
-                  ),
-                  SizedBox(width: 8),
-                  ...List.generate(
-                      5,
-                      (index) => Padding(
-                            padding:
-                                const EdgeInsets.symmetric(horizontal: 4.0),
-                            child: Container(
-                              width: 5,
-                              height: 5,
-                              decoration: BoxDecoration(
-                                color: Colors.grey,
-                                shape: BoxShape.circle,
-                              ),
-                            ),
-                          )),
-                  SizedBox(width: 8),
-                  Icon(
-                    Icons.check_circle,
-                    color: Colors.grey,
-                    size: 30,
-                  ),
-                ],
+              TrackerCheckout(
+                colorFirstIcon: Colors.black,
+                colorSecondIcon: Colors.grey,
+                colorThirdIcon: Colors.grey,
               ),
               SizedBox(height: 29),
               Text(

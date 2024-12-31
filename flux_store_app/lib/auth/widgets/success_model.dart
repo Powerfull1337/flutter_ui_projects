@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flux_store_app/auth/widgets/custmo_button.dart';
+import 'package:flux_store_app/auth/widgets/custom_button.dart';
 import 'package:flux_store_app/main/pages/main_page.dart';
 
 class SuccessModal extends StatelessWidget {

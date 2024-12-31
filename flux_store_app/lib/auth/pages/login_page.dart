@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flux_store_app/auth/pages/forgot_password_page.dart';
 import 'package:flux_store_app/auth/pages/register_page.dart';
-import 'package:flux_store_app/auth/widgets/custmo_button.dart';
+import 'package:flux_store_app/auth/widgets/custom_button.dart';
 import 'package:flux_store_app/auth/widgets/auth_field.dart';
 import 'package:flux_store_app/auth/widgets/social_circle.dart';
 

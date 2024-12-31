@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flux_store_app/auth/widgets/custmo_button.dart';
+import 'package:flux_store_app/auth/widgets/custom_button.dart';
+import 'package:flux_store_app/main/pages/checkout_page_order_copmleted.dart';
+import 'package:flux_store_app/main/widgets/tracker_checkout.dart';
 
 class CheckoutPagePayment extends StatefulWidget {
   const CheckoutPagePayment({super.key});
@@ -23,13 +25,37 @@ class _CheckoutPagePaymentState extends State<CheckoutPagePayment> {
         backgroundColor: Colors.white,
         title: Text(
           "Checkout",
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
+            fontSize: 18,
+          ),
         ),
         centerTitle: true,
-        toolbarHeight: 100,
+        toolbarHeight: 90,
         leading: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 32),
-          child: Icon(Icons.arrow_back_ios, color: Colors.black),
+          padding: const EdgeInsets.only(left: 20),
+          child: GestureDetector(
+            onTap: () {},
+            child: Container(
+              padding: EdgeInsets.only(left: 10),
+              height: 40,
+              width: 40,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.1),
+                    blurRadius: 10,
+                    spreadRadius: 1,
+                    offset: Offset(0, 4),
+                  ),
+                ],
+              ),
+              child: Icon(Icons.arrow_back_ios, color: Colors.black),
+            ),
+          ),
         ),
         elevation: 0,
       ),
@@ -41,57 +67,10 @@ class _CheckoutPagePaymentState extends State<CheckoutPagePayment> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.location_on,
-                        color: Colors.black,
-                        size: 30,
-                      ),
-                      SizedBox(width: 8),
-                      ...List.generate(
-                          5,
-                          (index) => Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 4.0),
-                                child: Container(
-                                  width: 6,
-                                  height: 4,
-                                  decoration: BoxDecoration(
-                                    color: Colors.grey,
-                                    shape: BoxShape.circle,
-                                  ),
-                                ),
-                              )),
-                      SizedBox(width: 8),
-                      Icon(
-                        Icons.card_travel,
-                        color: Colors.black,
-                        size: 30,
-                      ),
-                      SizedBox(width: 8),
-                      ...List.generate(
-                          5,
-                          (index) => Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 4.0),
-                                child: Container(
-                                  width: 5,
-                                  height: 5,
-                                  decoration: BoxDecoration(
-                                    color: Colors.grey,
-                                    shape: BoxShape.circle,
-                                  ),
-                                ),
-                              )),
-                      SizedBox(width: 8),
-                      Icon(
-                        Icons.check_circle,
-                        color: Colors.grey,
-                        size: 30,
-                      ),
-                    ],
+                  TrackerCheckout(
+                    colorFirstIcon: Colors.black,
+                    colorSecondIcon: Colors.black,
+                    colorThirdIcon: Colors.grey,
                   ),
                   SizedBox(height: 29),
                   Text(
@@ -284,7 +263,7 @@ class _CheckoutPagePaymentState extends State<CheckoutPagePayment> {
                         ),
                         RichText(
                           text: TextSpan(
-                            text: "I agree to",
+                            text: "I agree to ",
                             style: TextStyle(color: Colors.grey, fontSize: 18),
                             children: <TextSpan>[
                               TextSpan(
@@ -298,7 +277,14 @@ class _CheckoutPagePaymentState extends State<CheckoutPagePayment> {
                       ],
                     ),
                     SizedBox(height: 60),
+                    
                     CustomButton(
+                      onTap: (){
+                        Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => CheckoutPageOrderCopmleted()));
+                      },
                       text: "Place my order",
                       width: double.infinity,
                       color: Color(0xFF343434),

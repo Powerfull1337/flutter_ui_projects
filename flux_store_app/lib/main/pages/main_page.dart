@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flux_store_app/main/pages/all_orders_page.dart';
 import 'package:flux_store_app/main/pages/home_page.dart';
 import 'package:flux_store_app/main/pages/discover_page.dart';
 
@@ -24,9 +25,7 @@ class _MainPageState extends State<MainPage> {
         children: [
           HomePage(),
           DiscoverPage(),
-          Center(
-            child: Text("Child $_selectedPageIndex"),
-          ),
+          AllOrdersPage(),
           Center(
             child: Text("Child $_selectedPageIndex"),
           ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flux_store_app/auth/pages/change_password_page.dart';
-import 'package:flux_store_app/auth/widgets/custmo_button.dart';
+import 'package:flux_store_app/auth/widgets/custom_button.dart';
 
 class VerificationCodePage extends StatefulWidget {
   const VerificationCodePage({super.key});
