@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flux_store_app/main/models/product.dart';
 import 'package:flux_store_app/main/widgets/product_card.dart';
 
-
 class SearchPage extends StatefulWidget {
   const SearchPage({super.key});
 

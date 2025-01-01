@@ -21,18 +21,18 @@ class _DiscoverPageState extends State<DiscoverPage> {
           padding: EdgeInsets.symmetric(horizontal: 30, vertical: 30),
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Icon(Icons.menu),
-                  Text(
-                    "Discover",
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                  ),
-                  Icon(Icons.notifications),
-                ],
-              ),
-              SizedBox(height: 30),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //   children: const [
+              //     Icon(Icons.menu),
+              //     Text(
+              //       "Discover",
+              //       style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              //     ),
+              //     Icon(Icons.notifications),
+              //   ],
+              // ),
+
               Row(
                 children: [
                   Expanded(

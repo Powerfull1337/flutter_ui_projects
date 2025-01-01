@@ -23,50 +23,8 @@ class AllOrdersPage extends StatelessWidget {
         backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Colors.white,
-          toolbarHeight: 100,
+          toolbarHeight: 10,
           elevation: 0,
-          leading: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: IconButton(
-              icon: const Icon(Icons.menu, color: Colors.black),
-              onPressed: () {},
-            ),
-          ),
-          title: Text(
-            'My Orders',
-            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-          ),
-          centerTitle: true,
-          actions: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              child: IconButton(
-                icon: Stack(
-                  clipBehavior: Clip.none,
-                  children: [
-                    const Icon(Icons.notifications, color: Colors.black),
-                    Positioned(
-                      top: -2,
-                      right: -2,
-                      child: Container(
-                        padding: const EdgeInsets.all(2),
-                        decoration: const BoxDecoration(
-                          color: Colors.red,
-                          shape: BoxShape.circle,
-                        ),
-                        child: const Icon(
-                          Icons.circle,
-                          size: 8,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                onPressed: () {},
-              ),
-            ),
-          ],
           bottom: PreferredSize(
             preferredSize: const Size.fromHeight(50),
             child: Container(

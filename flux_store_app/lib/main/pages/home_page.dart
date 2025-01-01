@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flux_store_app/main/models/category.dart';
 import 'package:flux_store_app/main/models/product.dart';
+import 'package:flux_store_app/main/pages/collection_page.dart';
 import 'package:flux_store_app/main/widgets/product_card.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -19,26 +20,16 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 30,
+            ),
             child: Column(
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Icon(Icons.menu),
-                    Text(
-                      "Gemstore",
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                    ),
-                    Icon(Icons.notifications),
-                  ],
-                ),
-                const SizedBox(height: 40),
                 _categoryBuild(),
                 const SizedBox(height: 40),
                 Container(
@@ -48,18 +39,24 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       PageView(
                         controller: _controller,
-                        onPageChanged: (index) {
+                        onPageChanged: (index) { 
                           setState(() {
                             currentPage = index;
                           });
                         },
                         children: [
-                          buildImageCard('assets/images/main/beauty1.jpg',
-                              'AutumnCollection 2021'),
-                          buildImageCard('assets/images/main/beauty2.jpg',
-                              'AutumnCollection 2022'),
-                          buildImageCard('assets/images/main/beauty3.jpg',
-                              'AutumnCollection 2023'),
+                          buildImageCard(imagePath: 'assets/images/main/beauty1.jpg',
+                              text: 'AutumnCollection 2021',onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=> CollectionPage() ));
+                              } ),
+                           buildImageCard(imagePath: 'assets/images/main/beauty2.jpg',
+                              text: 'AutumnCollection 2022',onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=> CollectionPage() ));
+                              } ),
+                           buildImageCard(imagePath: 'assets/images/main/beauty2.jpg',
+                              text: 'AutumnCollection 2023',onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=> CollectionPage() ));
+                              } ),
                         ],
                       ),
                       Positioned(
@@ -485,37 +482,40 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Widget buildImageCard(String imagePath, String text) {
-    return Container(
-      width: double.infinity,
-      height: 150,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: Stack(
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(24),
-            child: Image.asset(
-              imagePath,
-              fit: BoxFit.cover,
-              height: double.infinity,
-              width: double.infinity,
-            ),
-          ),
-          Positioned(
-            right: 10,
-            top: 20,
-            child: Text(
-              text,
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
+  Widget buildImageCard({required String imagePath, required String text, required Function() onTap} ) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: double.infinity,
+        height: 150,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Stack(
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(24),
+              child: Image.asset(
+                imagePath,
+                fit: BoxFit.cover,
+                height: double.infinity,
+                width: double.infinity,
               ),
             ),
-          ),
-        ],
+            Positioned(
+              right: 10,
+              top: 20,
+              child: Text(
+                text,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
