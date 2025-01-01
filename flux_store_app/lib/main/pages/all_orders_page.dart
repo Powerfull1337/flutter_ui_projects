@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flux_store_app/main/models/order.dart';
-import 'package:flux_store_app/main/pages/order_detail_page.dart';
+import 'package:flux_store_app/main/pages/main_page.dart';
+import 'package:flux_store_app/main/pages/order_detail_delivered_page.dart';
+import 'package:flux_store_app/main/pages/order_detail_pending_page.dart';
 import 'package:flux_store_app/main/widgets/order_card.dart';
 
 class AllOrdersPage extends StatelessWidget {
@@ -113,12 +115,18 @@ class AllOrdersPage extends StatelessWidget {
         return OrderCard(
             order: order,
             onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => OrderDetail(
-                            order: order,
-                          )));
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                if (order.status == 'DELIVERED') {
+                  return OrderDetailDeliveredPage(
+                    order: order,
+                  );
+                } else if (order.status == 'PENDING') {
+                  return OrderDetailPendingPage(
+                    order: order,
+                  );
+                }
+                return MainPage();
+              }));
             });
       },
     );

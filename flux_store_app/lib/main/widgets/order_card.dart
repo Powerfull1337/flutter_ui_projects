@@ -142,19 +142,20 @@ class OrderCard extends StatelessWidget {
                         fontWeight: FontWeight.w400,
                         color: statusColor),
                   ),
-                  GestureDetector(
-                    onTap: onTap,
-                    child: Container(
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Colors.grey),
-                          borderRadius: BorderRadius.circular(17.5)),
-                      padding:
-                          EdgeInsets.symmetric(vertical: 7, horizontal: 25),
-                      child: Center(
-                        child: Text("Details"),
+                  if (order.status == "DELIVERED" || order.status == "PENDING")
+                    GestureDetector(
+                      onTap: onTap,
+                      child: Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.grey),
+                            borderRadius: BorderRadius.circular(17.5)),
+                        padding:
+                            EdgeInsets.symmetric(vertical: 7, horizontal: 25),
+                        child: Center(
+                          child: Text("Details"),
+                        ),
                       ),
-                    ),
-                  )
+                    )
                 ],
               )
             ],

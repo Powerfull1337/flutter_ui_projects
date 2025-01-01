@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flux_store_app/auth/widgets/custom_button.dart';
 import 'package:flux_store_app/main/models/order.dart';
 import 'package:flux_store_app/main/pages/rate_order_page.dart';
+import 'package:flux_store_app/main/pages/track_order_page.dart';
 
 import 'main_page.dart';
 
-class OrderDetail extends StatelessWidget {
-  const OrderDetail({super.key, required this.order});
+class OrderDetailPendingPage extends StatelessWidget {
+  const OrderDetailPendingPage({super.key, required this.order});
 
   final Order order;
 
@@ -48,37 +49,44 @@ class OrderDetail extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
         child: Column(
           children: [
-            Container(
-              height: 92,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Color(0xFF575757)),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Your order is delivered",
-                        style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      SizedBox(height: 10),
-                      Text(
-                        "Rate product to get 5 points for collect.",
-                        style: TextStyle(
-                            fontSize: 10,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.white),
-                      )
-                    ],
-                  ),
-                  Image.asset('assets/images/checkout/hand.png')
-                ],
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => TrackOrderPage(order: order,)));
+              },
+              child: Container(
+                height: 92,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Color(0xFF575757)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Your order is on the way",
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
+                        ),
+                        SizedBox(height: 10),
+                        Text(
+                          "Click here to track your order",
+                          style: TextStyle(
+                              fontSize: 10,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white),
+                        )
+                      ],
+                    ),
+                    Image.asset('assets/images/checkout/bus.png')
+                  ],
+                ),
               ),
             ),
             SizedBox(height: 26),
