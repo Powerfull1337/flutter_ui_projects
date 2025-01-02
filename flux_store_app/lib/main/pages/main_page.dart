@@ -48,7 +48,8 @@ class _MainPageState extends State<MainPage> {
       bottomNavigationBar: ClipRRect(
         borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
         child: BottomNavigationBar(
-            backgroundColor: const Color.fromARGB(255, 177, 165, 165),
+            
+            backgroundColor: Colors.white,
             currentIndex: _selectedPageIndex,
             unselectedItemColor: Colors.grey,
             selectedItemColor: Colors.black,

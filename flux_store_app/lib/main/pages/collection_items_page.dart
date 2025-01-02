@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flux_store_app/main/pages/collection_items_page.dart';
+import 'package:flux_store_app/main/models/product.dart';
+import 'package:flux_store_app/main/widgets/grid_items_two_in_row.dart';
 
-class CollectionPage extends StatelessWidget {
-  const CollectionPage({super.key});
+class CollectionItemsPage extends StatelessWidget {
+  const CollectionItemsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.transparent,
       body: Stack(
         children: [
           Container(
@@ -77,47 +77,18 @@ class CollectionPage extends StatelessWidget {
                   children: [
                     Expanded(
                       child: GridView.builder(
-                        physics: BouncingScrollPhysics(),
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        itemCount: listOfProducts.length,
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
-                          crossAxisSpacing: 10,
-                          mainAxisSpacing: 10,
+                          mainAxisSpacing: 16,
+                          crossAxisSpacing: 16,
                           childAspectRatio: 0.7,
                         ),
-                        itemCount: 4,
                         itemBuilder: (context, index) {
-                          return Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              image: DecorationImage(
-                                image: AssetImage(
-                                  'assets/images/main/beauty3.jpg',
-                                ),
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          );
+                          final product = listOfProducts[index];
+                          return GridItemsTwoInRow(product: product);
                         },
-                      ),
-                    ),
-                    SizedBox(height: 30),
-                    ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => CollectionItemsPage()));
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.black,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                        minimumSize: Size(double.infinity, 50),
-                      ),
-                      child: Text(
-                        "VIEW ALL",
-                        style: TextStyle(color: Colors.white, fontSize: 16),
                       ),
                     ),
                   ],
