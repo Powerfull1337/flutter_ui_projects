@@ -59,7 +59,7 @@ class WishlistPage extends StatelessWidget {
 }
 
 class _AllItemsTab extends StatelessWidget {
-  const _AllItemsTab({super.key});
+  const _AllItemsTab();
 
   @override
   Widget build(BuildContext context) {
@@ -86,7 +86,7 @@ class _AllItemsTab extends StatelessWidget {
 }
 
 class _BoardsTab extends StatelessWidget {
-  const _BoardsTab({super.key});
+  const _BoardsTab();
 
   @override
   Widget build(BuildContext context) {

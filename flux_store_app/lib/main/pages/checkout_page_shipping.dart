@@ -214,17 +214,17 @@ class _CheckoutPageShippingState extends State<CheckoutPageShipping> {
   }
 
   Widget _buildShippingOption(
-      int value, String price, String title, String subtitle, double cost) {
+      int index, String price, String title, String subtitle, double cost) {
     return GestureDetector(
       onTap: () {
         setState(() {
-          selectedShipping = value;
+          selectedShipping = index;
         });
       },
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
-          border: selectedShipping == value
+          border: selectedShipping == index
               ? Border.all(
                   color: Colors.grey.shade300,
                   width: 1,
@@ -237,7 +237,7 @@ class _CheckoutPageShippingState extends State<CheckoutPageShipping> {
           child: Row(
             children: [
               Radio<int>(
-                value: value,
+                value: index,
                 groupValue: selectedShipping,
                 onChanged: (int? newValue) {
                   setState(() {

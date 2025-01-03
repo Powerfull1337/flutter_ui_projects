@@ -42,7 +42,7 @@ dependencies:
   flutter_rating_bar: ^4.0.1
   intl: ^0.20.1
   mobkit_dashed_border: ^0.0.7
-  
+  awesome_card: ^1.1.7
   
 dev_dependencies:
   flutter_test:

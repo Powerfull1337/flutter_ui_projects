@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flux_store_app/auth/widgets/custom_button.dart';
 import 'package:flux_store_app/main/pages/checkout_page_order_copmleted.dart';
+import 'package:flux_store_app/main/widgets/custom_credit_card.dart';
 import 'package:flux_store_app/main/widgets/tracker_checkout.dart';
 
 class CheckoutPagePayment extends StatefulWidget {
@@ -14,8 +15,7 @@ class _CheckoutPagePaymentState extends State<CheckoutPagePayment> {
   int _selectedPaymentContainerIndex = 0;
   int currentCard = 0;
   bool isBoxChecked = false;
-  final PageController _pageCardController =
-      PageController(viewportFraction: 0.85);
+
 
   @override
   Widget build(BuildContext context) {
@@ -118,18 +118,21 @@ class _CheckoutPagePaymentState extends State<CheckoutPagePayment> {
                   ),
                   SizedBox(height: 30),
                   SizedBox(
-                    height: 220,
+                    height: 200,
                     child: PageView.builder(
-                      scrollDirection: Axis.horizontal,
-                      controller: _pageCardController,
-                      itemCount: 3,
-                      onPageChanged: (int index) {
-                        setState(() {
-                          currentCard = index;
-                        });
-                      },
+                      controller: PageController(viewportFraction: 0.9),
+                      itemCount: 2,
                       itemBuilder: (context, index) {
-                        return _buildCard(index);
+                        return Padding(
+                          padding: const EdgeInsets.only(right: 20),
+                          child: CustomCreditCard(
+                              imagePath:
+                                  'assets/images/main/world_map_blue.jpg',
+                              cardNumber: '1234567890098712',
+                              cardHolderName: 'Denys Palamarchuk',
+                              validThru: '05/25',
+                              typeCard: 'assets/images/checkout/visa.png'),
+                        );
                       },
                     ),
                   ),
@@ -277,13 +280,13 @@ class _CheckoutPagePaymentState extends State<CheckoutPagePayment> {
                       ],
                     ),
                     SizedBox(height: 60),
-                    
                     CustomButton(
-                      onTap: (){
+                      onTap: () {
                         Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => CheckoutPageOrderCopmleted()));
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    CheckoutPageOrderCopmleted()));
                       },
                       text: "Place my order",
                       width: double.infinity,
@@ -316,98 +319,7 @@ class _CheckoutPagePaymentState extends State<CheckoutPagePayment> {
     );
   }
 
-  Widget _buildCard(int index) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10.0),
-      child: Card(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16.0),
-        ),
-        elevation: 4,
-        child: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Colors.lightBlueAccent, Colors.blue],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-            borderRadius: BorderRadius.circular(16),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'VISA',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                  textAlign: TextAlign.right,
-                ),
-                SizedBox(height: 20),
-                Text(
-                  '4364 1345 8932 8378',
-                  style: TextStyle(
-                    fontSize: 22,
-                    color: Colors.white,
-                    letterSpacing: 2.0,
-                  ),
-                ),
-                SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'CARDHOLDER NAME',
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: Colors.white70,
-                          ),
-                        ),
-                        Text(
-                          'Sunie Pham',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'VALID THRU',
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: Colors.white70,
-                          ),
-                        ),
-                        Text(
-                          '05/24',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
+
 
   Widget _buildPaymentContainer(
     int index,

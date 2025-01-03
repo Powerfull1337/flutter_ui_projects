@@ -7,6 +7,7 @@ class CheckoutTextField extends StatelessWidget {
 
   final String labelText;
   final Icon? suffixIcon;
+  final bool isDivider;
 
   const CheckoutTextField(
       {super.key,
@@ -14,7 +15,8 @@ class CheckoutTextField extends StatelessWidget {
       this.asteriskColor,
       required this.labelText,
       this.isArsterisk = true,
-      this.suffixIcon});
+      this.suffixIcon,
+      this.isDivider = true});
 
   @override
   Widget build(BuildContext context) {
@@ -38,10 +40,12 @@ class CheckoutTextField extends StatelessWidget {
         filled: false,
         contentPadding: EdgeInsets.only(bottom: 5),
         enabledBorder: UnderlineInputBorder(
-          borderSide: BorderSide(color: Colors.grey),
+          borderSide:
+              BorderSide(color: isDivider ? Colors.grey : Colors.transparent),
         ),
         focusedBorder: UnderlineInputBorder(
-          borderSide: BorderSide(color: Colors.black),
+          borderSide:
+              BorderSide(color: isDivider ? Colors.grey : Colors.transparent),
         ),
         errorText: isRequired ? "Field is required" : null,
         errorStyle: TextStyle(color: Colors.red),

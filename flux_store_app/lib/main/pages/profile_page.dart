@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flux_store_app/main/pages/card_managment_page.dart';
 import 'package:flux_store_app/main/pages/profile_settings.dart';
-import 'package:flux_store_app/main/pages/setting_page.dart';
+import 'package:flux_store_app/main/pages/voucher_page.dart';
 import 'package:flux_store_app/main/pages/wishlist_page.dart';
 import 'package:flux_store_app/main/widgets/settings_tile.dart';
 
@@ -95,7 +95,12 @@ class ProfilePage extends StatelessWidget {
                     SettingsTile(
                       title: Text("Voucher"),
                       icon: Icons.account_balance_wallet_rounded,
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => VoucherPage()));
+                      },
                     ),
                     SettingsTile(
                       title: Text("My wishlsit"),

@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flux_store_app/main/pages/all_orders_page.dart';
-import 'package:flux_store_app/main/pages/checkout_page_order_copmleted.dart';
-
-import 'package:flux_store_app/main/pages/checkout_page_payment.dart';
-import 'package:flux_store_app/main/pages/checkout_page_shipping.dart';
-import 'package:flux_store_app/main/pages/main_page.dart';
+import 'package:flux_store_app/main/pages/delivery_adress_page.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 
@@ -23,7 +18,7 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.openSansTextTheme(),
       ),
       debugShowCheckedModeBanner: false,
-      home: MainPage(),
+      home: DeliveryAddressPage(),
     );
   }
 }
