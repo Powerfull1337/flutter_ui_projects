@@ -27,13 +27,13 @@ class ForgotPasswordPage extends StatelessWidget {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
                         border: Border.all(width: 0.5, color: Colors.grey)),
-                    child: Center(child: Icon(Icons.arrow_back)),
+                    child: const Center(child: Icon(Icons.arrow_back)),
                   ),
                 ),
               ],
             ),
-            SizedBox(height: 40),
-            Align(
+            const SizedBox(height: 40),
+            const Align(
               alignment: Alignment.centerLeft,
               child: Text(
                 "Forgot password?",
@@ -43,8 +43,8 @@ class ForgotPasswordPage extends StatelessWidget {
                     fontWeight: FontWeight.bold),
               ),
             ),
-            SizedBox(height: 20),
-            Align(
+            const SizedBox(height: 20),
+            const Align(
               alignment: Alignment.centerLeft,
               child: Text(
                 "Enter email associated with your account and we’ll send and email with intructions to reset your password",
@@ -54,12 +54,12 @@ class ForgotPasswordPage extends StatelessWidget {
                     fontWeight: FontWeight.w400),
               ),
             ),
-            SizedBox(height: 40),
-            AuthField(
+            const SizedBox(height: 40),
+            const AuthField(
               hintText: "enter your email here",
               prefixIcon: Icon(Icons.mail),
             ),
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             //Button for verification page
             CustomButton(
               text: "Go to verify",
@@ -67,7 +67,7 @@ class ForgotPasswordPage extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => VerificationCodePage()));
+                        builder: (context) => const VerificationCodePage()));
               },
             )
           ],

@@ -15,18 +15,23 @@ class SettingsTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          ListTile(
-            leading: Icon(icon, color: Colors.grey.withOpacity(0.5)),
-            title: title,
-            trailing: isTrailing ? Icon(Icons.arrow_forward_ios) : null,
-            onTap: onTap,
-          ),
-          Divider()
-        ],
-      ),
+    return Column(
+      children: [
+        ListTile(
+          leading: Icon(icon, color: const Color(0xFF777E90)),
+          title: title,
+          trailing: isTrailing
+              ? const Icon(
+                  Icons.arrow_forward_ios,
+                  color: Colors.black,
+                )
+              : null,
+          onTap: onTap,
+        ),
+        Divider(
+          color: Colors.grey.withOpacity(0.5),
+        )
+      ],
     );
   }
 }

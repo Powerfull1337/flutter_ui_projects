@@ -16,7 +16,7 @@ class CardManagmentPage extends StatelessWidget {
           child: GestureDetector(
             onTap: () {},
             child: Container(
-              padding: EdgeInsets.only(left: 10),
+              padding: const EdgeInsets.only(left: 10),
               height: 40,
               width: 40,
               decoration: BoxDecoration(
@@ -27,28 +27,28 @@ class CardManagmentPage extends StatelessWidget {
                     color: Colors.black.withOpacity(0.1),
                     blurRadius: 10,
                     spreadRadius: 1,
-                    offset: Offset(0, 4),
+                    offset: const Offset(0, 4),
                   ),
                 ],
               ),
-              child: Icon(Icons.arrow_back_ios, color: Colors.black),
+              child: const Icon(Icons.arrow_back_ios, color: Colors.black),
             ),
           ),
         ),
         backgroundColor: Colors.white,
         toolbarHeight: 100,
         centerTitle: true,
-        title: Text("Payment"),
+        title: const Text("Payment"),
       ),
       body: Column(
         children: [
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 30),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "Card Managment",
                   style: TextStyle(
                       color: Colors.black,
@@ -60,9 +60,9 @@ class CardManagmentPage extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => AddCreditCardPage()));
+                            builder: (context) => const AddCreditCardPage()));
                   },
-                  child: Text(
+                  child: const Text(
                     "Add new + ",
                     style: TextStyle(
                         color: Colors.red,
@@ -73,15 +73,15 @@ class CardManagmentPage extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           SizedBox(
             height: 200,
             child: PageView.builder(
               controller: PageController(viewportFraction: 0.9),
               itemCount: 2,
               itemBuilder: (context, index) {
-                return Padding(
-                  padding: const EdgeInsets.only(right: 20),
+                return const Padding(
+                  padding: EdgeInsets.only(right: 20),
                   child: CustomCreditCard(
                       imagePath: 'assets/images/main/world_map_blue.jpg',
                       cardNumber: '1234567890098712',
@@ -92,16 +92,16 @@ class CardManagmentPage extends StatelessWidget {
               },
             ),
           ),
-          SizedBox(height: 44),
-          Align(
+          const SizedBox(height: 44),
+          const Align(
             alignment: Alignment.centerLeft,
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30),
+              padding: EdgeInsets.symmetric(horizontal: 30),
               child: Text("or check out with",
                   style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400)),
             ),
           ),
-          SizedBox(height: 25),
+          const SizedBox(height: 25),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 30),
             child: Row(
@@ -126,7 +126,7 @@ class CardManagmentPage extends StatelessWidget {
 Container _buildAnotherPaymentMethod(String imagePath) {
   return Container(
     width: 50,
-    padding: EdgeInsets.symmetric(vertical: 5),
+    padding: const EdgeInsets.symmetric(vertical: 5),
     height: 34,
     decoration: BoxDecoration(
       border: Border.all(

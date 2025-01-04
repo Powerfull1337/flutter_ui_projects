@@ -90,7 +90,7 @@ class IntroPageSecond extends StatelessWidget {
                         Container(
                           width: 8,
                           height: 8,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             shape: BoxShape.circle,
                             color: Colors.black,
                           ),
@@ -117,7 +117,7 @@ class IntroPageSecond extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => IntroPageThird()));
+                                    builder: (context) => const IntroPageThird()));
                           }))
                 ],
               ),

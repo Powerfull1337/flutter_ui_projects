@@ -18,26 +18,26 @@ class LoginPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
+            const Text(
               "Log into",
               style: TextStyle(
                   fontSize: 24,
                   color: Colors.black,
                   fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 15),
-            Text(
+            const SizedBox(height: 15),
+            const Text(
               "your account",
               style: TextStyle(
                   fontSize: 24,
                   color: Colors.black,
                   fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 75),
-            AuthField(hintText: "Email address"),
-            SizedBox(height: 15),
-            AuthField(hintText: "Password"),
-            SizedBox(height: 45),
+            const SizedBox(height: 75),
+            const AuthField(hintText: "Email address"),
+            const SizedBox(height: 15),
+            const AuthField(hintText: "Password"),
+            const SizedBox(height: 45),
             Align(
               alignment: Alignment.centerRight,
               child: GestureDetector(
@@ -45,25 +45,25 @@ class LoginPage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => ForgotPasswordPage()));
+                          builder: (context) => const ForgotPasswordPage()));
                 },
-                child: Text("Forgot Password?"),
+                child: const Text("Forgot Password?"),
               ),
             ),
-            SizedBox(height: 55),
-            Align(
+            const SizedBox(height: 55),
+            const Align(
                 alignment: Alignment.center,
                 child: CustomButton(text: "LOG IN")),
-            SizedBox(height: 25),
-            Align(
+            const SizedBox(height: 25),
+            const Align(
               alignment: Alignment.center,
               child: Text(
                 "or log in with",
                 style: TextStyle(color: Colors.grey),
               ),
             ),
-            SizedBox(height: 25),
-            Row(
+            const SizedBox(height: 25),
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SocialCircle(
@@ -79,26 +79,26 @@ class LoginPage extends StatelessWidget {
                 ),
               ],
             ),
-            Spacer(),
+            const Spacer(),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   "Don`t have an account?",
                   style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.w400,
                       fontSize: 14),
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 GestureDetector(
                   onTap: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => RegisterPage()));
+                            builder: (context) => const RegisterPage()));
                   },
-                  child: Text(
+                  child: const Text(
                     "Sign Up",
                     style: TextStyle(
                         color: Colors.black,

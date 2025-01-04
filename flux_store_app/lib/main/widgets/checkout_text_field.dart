@@ -26,7 +26,7 @@ class CheckoutTextField extends StatelessWidget {
         label: RichText(
           text: TextSpan(
             text: labelText,
-            style: TextStyle(color: Colors.grey, fontSize: 18),
+            style: const TextStyle(color: Colors.grey, fontSize: 18),
             children: <TextSpan>[
               TextSpan(
                 text: isArsterisk ? " *" : null,
@@ -38,7 +38,7 @@ class CheckoutTextField extends StatelessWidget {
         ),
         fillColor: Colors.grey,
         filled: false,
-        contentPadding: EdgeInsets.only(bottom: 5),
+        contentPadding: const EdgeInsets.only(bottom: 5),
         enabledBorder: UnderlineInputBorder(
           borderSide:
               BorderSide(color: isDivider ? Colors.grey : Colors.transparent),
@@ -48,8 +48,8 @@ class CheckoutTextField extends StatelessWidget {
               BorderSide(color: isDivider ? Colors.grey : Colors.transparent),
         ),
         errorText: isRequired ? "Field is required" : null,
-        errorStyle: TextStyle(color: Colors.red),
-        focusedErrorBorder: UnderlineInputBorder(
+        errorStyle: const TextStyle(color: Colors.red),
+        focusedErrorBorder: const UnderlineInputBorder(
           borderSide: BorderSide(color: Colors.red),
         ),
       ),

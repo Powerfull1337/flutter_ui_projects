@@ -10,7 +10,7 @@ class IntroButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
       decoration: BoxDecoration(
         color: Colors.grey.withOpacity(0.8),
         border: Border.all(
@@ -32,7 +32,7 @@ class IntroButton extends StatelessWidget {
         ),
         child: Text(
           buttonText,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
             fontSize: 16.0,
             fontWeight: FontWeight.bold,

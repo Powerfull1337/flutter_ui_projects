@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flux_store_app/main/widgets/voucher_coupon.dart';
+import 'package:flux_store_app/main/widgets/switch_container.dart';
 
-class VoucherPage extends StatelessWidget {
-  const VoucherPage({super.key});
+class NotificationSettingPage extends StatelessWidget {
+  const NotificationSettingPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,9 @@ class VoucherPage extends StatelessWidget {
         leading: Padding(
           padding: const EdgeInsets.only(left: 20),
           child: GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.pop(context);
+            },
             child: Container(
               padding: const EdgeInsets.only(left: 10),
               height: 40,
@@ -36,41 +38,24 @@ class VoucherPage extends StatelessWidget {
         backgroundColor: Colors.white,
         toolbarHeight: 100,
         centerTitle: true,
-        title: const Text("Voucher"),
+        title: const Text("Settings"),
       ),
       body: const Padding(
-        padding: EdgeInsets.symmetric(horizontal: 24),
+        padding: EdgeInsets.symmetric(horizontal: 31, vertical: 5),
         child: Column(
           children: [
-            VoucherCard(
-              discount: '50%',
-              title: 'Black Friday',
-              description: 'Sale off 50%',
-              code: 'fridaysale',
-              expiryDate: '20 Dec',
-              discountColor: Colors.black,
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            VoucherCard(
-              discount: '40%',
-              title: 'Black Friday',
-              description: 'Sale off 40%',
-              code: 'fridaysale',
-              expiryDate: '11 Dec',
-              discountColor: Colors.black54,
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            VoucherCard(
-              discount: '15%',
-              title: 'Black Friday',
-              description: 'Sale off 15%',
-              code: 'fridaysale',
-              expiryDate: '20 Dec',
-              discountColor: Colors.grey,
+            SwitchContainer(
+                title: "Show notifications",
+                description: "Receive push notifications for new messages"),
+            SizedBox(height: 37),
+            SwitchContainer(
+                title: "Notification sounds",
+                description: "Play sound for new messages"),
+            SizedBox(height: 37),
+            SwitchContainer(
+              title: "Lock screen notifications",
+              description: "Allow notification on the lock screen",
+              switchValue: false,
             ),
           ],
         ),

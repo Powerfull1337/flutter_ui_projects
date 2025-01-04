@@ -5,7 +5,7 @@ class DashedButton extends StatelessWidget {
   final IconData icon;
   final VoidCallback onPressed;
 
-  DashedButton({required this.icon, required this.onPressed});
+  const DashedButton({super.key, required this.icon, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class DashedButton extends StatelessWidget {
         width: 80,
         height: 80,
         decoration: BoxDecoration(
-          border: DashedBorder.fromBorderSide(
+          border: const DashedBorder.fromBorderSide(
             dashLength: 10,
             side: BorderSide(color: Colors.grey, width: 1),
           ),

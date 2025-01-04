@@ -116,7 +116,7 @@ class IntroPageFirst extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => IntroPageSecond()));
+                                builder: (context) => const IntroPageSecond()));
                       }))
                 ],
               ),

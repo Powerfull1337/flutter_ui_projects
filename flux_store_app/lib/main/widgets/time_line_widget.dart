@@ -6,7 +6,7 @@ class TimelineTile extends StatelessWidget {
   final bool isFirst;
   final bool isLast;
 
-  TimelineTile({
+  const TimelineTile({super.key, 
     required this.event,
     required this.isFirst,
     required this.isLast,
@@ -32,7 +32,7 @@ class TimelineTile extends StatelessWidget {
               ),
               width: 20,
               height: 20,
-              child: Center(
+              child: const Center(
                 child: Icon(
                   Icons.check,
                   size: 14,
@@ -48,23 +48,23 @@ class TimelineTile extends StatelessWidget {
               ),
           ],
         ),
-        SizedBox(width: 16),
+        const SizedBox(width: 16),
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 event.title,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
                   color: Colors.black87,
                 ),
               ),
-              SizedBox(height: 4),
+              const SizedBox(height: 4),
               Text(
                 event.time,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 14,
                   color: Colors.grey,
                 ),

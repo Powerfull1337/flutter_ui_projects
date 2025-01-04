@@ -12,7 +12,7 @@ class FoundedItemPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: SafeArea(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 30),
+            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
             child: Column(
               children: [
                 Row(
@@ -33,19 +33,19 @@ class FoundedItemPage extends StatelessWidget {
                             BoxShadow(
                               color: Colors.black.withOpacity(0.1),
                               blurRadius: 8,
-                              offset: Offset(0, 2),
+                              offset: const Offset(0, 2),
                             ),
                           ],
                         ),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           color: Colors.black,
                           size: 20,
                         ),
                       ),
                     ),
-                    SizedBox(width: 40),
-                    Text(
+                    const SizedBox(width: 40),
+                    const Text(
                       "Dresses",
                       style: TextStyle(
                         fontSize: 18,
@@ -54,11 +54,11 @@ class FoundedItemPage extends StatelessWidget {
                     )
                   ],
                 ),
-                SizedBox(height: 40),
+                const SizedBox(height: 40),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Column(
+                    const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
@@ -79,7 +79,7 @@ class FoundedItemPage extends StatelessWidget {
                     ),
                     Container(
                       padding:
-                          EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                          const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(24),
                         border: Border.all(
@@ -87,7 +87,7 @@ class FoundedItemPage extends StatelessWidget {
                           color: Colors.grey.withOpacity(0.3),
                         ),
                       ),
-                      child: Row(
+                      child: const Row(
                         children: [
                           Text(
                             "Filter",
@@ -100,7 +100,7 @@ class FoundedItemPage extends StatelessWidget {
                     )
                   ],
                 ),
-                SizedBox(height: 30),
+                const SizedBox(height: 30),
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.7,
                   child: GridView.builder(

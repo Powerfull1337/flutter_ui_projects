@@ -16,7 +16,7 @@ class ProductCard extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Container(
+        SizedBox(
           height: 172,
           width: 126,
           child: ClipRRect(
@@ -27,15 +27,15 @@ class ProductCard extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         Text(
           title,
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
         ),
-        SizedBox(height: 5),
+        const SizedBox(height: 5),
         Text(
           "\$ ${price.toString()}",
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
         ),
       ],
     );

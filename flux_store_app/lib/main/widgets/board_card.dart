@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class BoardCard extends StatelessWidget {
-  const BoardCard({Key? key}) : super(key: key);
+  const BoardCard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -50,10 +50,10 @@ class BoardCard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 16),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text(
+              Text(
                 'Going out outfits',
                 style: TextStyle(
                   fontSize: 20,
@@ -74,7 +74,7 @@ class BoardCard extends StatelessWidget {
               color: Colors.grey,
             ),
           ),
-          Divider()
+          const Divider()
         ],
       ),
     );

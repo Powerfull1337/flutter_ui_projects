@@ -17,7 +17,7 @@ class TrackerCheckout extends StatelessWidget {
           color: colorFirstIcon,
           size: 30,
         ),
-        SizedBox(width: 8),
+        const SizedBox(width: 8),
         ...List.generate(
             5,
             (index) => Padding(
@@ -25,19 +25,19 @@ class TrackerCheckout extends StatelessWidget {
                   child: Container(
                     width: 6,
                     height: 4,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.grey,
                       shape: BoxShape.circle,
                     ),
                   ),
                 )),
-        SizedBox(width: 8),
+        const SizedBox(width: 8),
         Icon(
           Icons.card_travel,
           color: colorSecondIcon,
           size: 30,
         ),
-        SizedBox(width: 8),
+        const SizedBox(width: 8),
         ...List.generate(
             5,
             (index) => Padding(
@@ -45,13 +45,13 @@ class TrackerCheckout extends StatelessWidget {
                   child: Container(
                     width: 5,
                     height: 5,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.grey,
                       shape: BoxShape.circle,
                     ),
                   ),
                 )),
-        SizedBox(width: 8),
+        const SizedBox(width: 8),
         Icon(
           Icons.check_circle,
           color: colorThirdIcon,

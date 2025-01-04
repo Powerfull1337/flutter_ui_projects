@@ -8,7 +8,7 @@ class VoucherCard extends StatelessWidget {
   final String expiryDate;
   final Color discountColor;
 
-  const VoucherCard({
+  const VoucherCard({super.key, 
     required this.discount,
     required this.title,
     required this.description,
@@ -27,14 +27,14 @@ class VoucherCard extends StatelessWidget {
           BoxShadow(
             color: Colors.black.withOpacity(0.1),
             blurRadius: 6,
-            offset: Offset(0, 4),
+            offset: const Offset(0, 4),
           ),
         ],
       ),
       child: Row(
         children: [
           Container(
-            margin: EdgeInsets.all(15),
+            margin: const EdgeInsets.all(15),
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
@@ -45,7 +45,7 @@ class VoucherCard extends StatelessWidget {
               child: Center(
                 child: Text(
                   discount,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
@@ -54,30 +54,30 @@ class VoucherCard extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(width: 15),
+          const SizedBox(width: 15),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   title,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(height: 5),
+                const SizedBox(height: 5),
                 Text(
                   description,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 14,
                     color: Colors.grey,
                   ),
                 ),
-                SizedBox(height: 5),
+                const SizedBox(height: 5),
                 Text(
                   'Code: $code',
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 14,
                     color: Colors.grey,
                   ),
@@ -85,7 +85,7 @@ class VoucherCard extends StatelessWidget {
               ],
             ),
           ),
-          Container(
+          SizedBox(
             width: 1,
             height: 100,
             child: LayoutBuilder(
@@ -103,10 +103,10 @@ class VoucherCard extends StatelessWidget {
               },
             ),
           ),
-          SizedBox(width: 15),
+          const SizedBox(width: 15),
           Column(
             children: [
-              Text(
+              const Text(
                 'Exp.',
                 style: TextStyle(
                   fontSize: 14,
@@ -115,7 +115,7 @@ class VoucherCard extends StatelessWidget {
               ),
               Text(
                 expiryDate,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.bold,
                 ),

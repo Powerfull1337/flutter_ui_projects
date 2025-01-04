@@ -21,7 +21,7 @@ class _DeliveryAddressPageState extends State<DeliveryAddressPage> {
           child: GestureDetector(
             onTap: () {},
             child: Container(
-              padding: EdgeInsets.only(left: 10),
+              padding: const EdgeInsets.only(left: 10),
               height: 40,
               width: 40,
               decoration: BoxDecoration(
@@ -32,27 +32,27 @@ class _DeliveryAddressPageState extends State<DeliveryAddressPage> {
                     color: Colors.black.withOpacity(0.1),
                     blurRadius: 10,
                     spreadRadius: 1,
-                    offset: Offset(0, 4),
+                    offset: const Offset(0, 4),
                   ),
                 ],
               ),
-              child: Icon(Icons.arrow_back_ios, color: Colors.black),
+              child: const Icon(Icons.arrow_back_ios, color: Colors.black),
             ),
           ),
         ),
         backgroundColor: Colors.white,
         toolbarHeight: 100,
         centerTitle: true,
-        title: Text("Delivery address"),
+        title: const Text("Delivery address"),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30),
         child: Column(
           children: [
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             _buildRadioDeliveryButtonContainer(0, 'My Home',
                 'SBI Building, street 3, Software Park', Icons.home),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
             _buildRadioDeliveryButtonContainer(
@@ -85,7 +85,7 @@ class _DeliveryAddressPageState extends State<DeliveryAddressPage> {
                 color: Colors.black.withOpacity(0.1),
                 blurRadius: 10,
                 spreadRadius: 1,
-                offset: Offset(0, 4),
+                offset: const Offset(0, 4),
               )
             ]),
         child: Padding(
@@ -107,15 +107,15 @@ class _DeliveryAddressPageState extends State<DeliveryAddressPage> {
                     icon,
                     size: 40,
                   ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Send to"),
+                      const Text("Send to"),
                       Text(text),
                     ],
                   ),
-                  Expanded(
+                  const Expanded(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
@@ -132,10 +132,10 @@ class _DeliveryAddressPageState extends State<DeliveryAddressPage> {
                   )
                 ],
               ),
-              SizedBox(height: 5),
+              const SizedBox(height: 5),
               Text(
                 address,
-                style: TextStyle(
+                style: const TextStyle(
                     color: Colors.grey,
                     fontWeight: FontWeight.w400,
                     fontSize: 12),

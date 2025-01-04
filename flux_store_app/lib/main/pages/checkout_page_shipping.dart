@@ -21,7 +21,7 @@ class _CheckoutPageShippingState extends State<CheckoutPageShipping> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text(
+        title: const Text(
           "Checkout",
           style: TextStyle(
             color: Colors.black,
@@ -46,11 +46,11 @@ class _CheckoutPageShippingState extends State<CheckoutPageShipping> {
                     color: Colors.black.withOpacity(0.1),
                     blurRadius: 10,
                     spreadRadius: 1,
-                    offset: Offset(0, 4),
+                    offset: const Offset(0, 4),
                   ),
                 ],
               ),
-              child: Icon(Icons.arrow_back_ios, color: Colors.black),
+              child: const Icon(Icons.arrow_back_ios, color: Colors.black),
             ),
           ),
         ),
@@ -62,90 +62,90 @@ class _CheckoutPageShippingState extends State<CheckoutPageShipping> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              TrackerCheckout(
+              const TrackerCheckout(
                 colorFirstIcon: Colors.black,
                 colorSecondIcon: Colors.grey,
                 colorThirdIcon: Colors.grey,
               ),
-              SizedBox(height: 29),
-              Text(
+              const SizedBox(height: 29),
+              const Text(
                 "STEP 1",
                 style: TextStyle(fontSize: 11),
               ),
-              SizedBox(height: 10),
-              Text(
+              const SizedBox(height: 10),
+              const Text(
                 "Shipping",
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),
-              SizedBox(height: 42),
-              CheckoutTextField(
+              const SizedBox(height: 42),
+              const CheckoutTextField(
                 labelText: "First name",
               ),
-              SizedBox(height: 35),
-              CheckoutTextField(
+              const SizedBox(height: 35),
+              const CheckoutTextField(
                 isRequired: true,
                 labelText: "Last name",
               ),
-              SizedBox(height: 35),
-              CheckoutTextField(
+              const SizedBox(height: 35),
+              const CheckoutTextField(
                   labelText: "Country",
                   asteriskColor: Colors.green,
                   suffixIcon: Icon(
                     Icons.arrow_drop_down,
                     size: 28,
                   )),
-              SizedBox(height: 35),
-              CheckoutTextField(
+              const SizedBox(height: 35),
+              const CheckoutTextField(
                 labelText: "Street name",
                 asteriskColor: Colors.green,
               ),
-              SizedBox(height: 35),
-              CheckoutTextField(
+              const SizedBox(height: 35),
+              const CheckoutTextField(
                 labelText: "City",
                 asteriskColor: Colors.green,
               ),
-              SizedBox(height: 35),
-              CheckoutTextField(
+              const SizedBox(height: 35),
+              const CheckoutTextField(
                 labelText: "State / Province",
                 isArsterisk: false,
               ),
-              SizedBox(height: 35),
-              CheckoutTextField(
+              const SizedBox(height: 35),
+              const CheckoutTextField(
                 labelText: "Zip-code",
                 asteriskColor: Colors.green,
               ),
-              SizedBox(height: 35),
-              CheckoutTextField(
+              const SizedBox(height: 35),
+              const CheckoutTextField(
                 labelText: "Phone number",
                 asteriskColor: Colors.green,
               ),
-              SizedBox(height: 19),
-              Text(
+              const SizedBox(height: 19),
+              const Text(
                 "Shipping method",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               _buildShippingOption(0, "Free", "Delivery to home",
                   "Delivery from 3 to 7 business days", 0.00),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               _buildShippingOption(1, "\$9.90", "Delivery to home",
                   "Delivery from 4 to 6 business days", 9.90),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               _buildShippingOption(2, "\$9.90", "Fast Delivery",
                   "Delivery from 2 to 3 business days", 9.90),
-              SizedBox(height: 63),
-              Text(
+              const SizedBox(height: 63),
+              const Text(
                 "Coupon Code",
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               _buildPromoField(),
-              SizedBox(height: 40),
-              Text(
+              const SizedBox(height: 40),
+              const Text(
                 "Billing Adress",
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Row(
                 children: [
                   Checkbox(
@@ -156,21 +156,21 @@ class _CheckoutPageShippingState extends State<CheckoutPageShipping> {
                       });
                     },
                   ),
-                  SizedBox(width: 14),
-                  Text("Copy address data from shipping")
+                  const SizedBox(width: 14),
+                  const Text("Copy address data from shipping")
                 ],
               ),
-              SizedBox(height: 62),
+              const SizedBox(height: 62),
               CustomButton(
                 onTap: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => CheckoutPagePayment()));
+                          builder: (context) => const CheckoutPagePayment()));
                 },
                 text: "Continue to Payment",
                 width: double.infinity,
-                color: Color(0xFF343434),
+                color: const Color(0xFF343434),
               ),
             ],
           ),
@@ -182,30 +182,30 @@ class _CheckoutPageShippingState extends State<CheckoutPageShipping> {
   TextField _buildPromoField() {
     return TextField(
       decoration: InputDecoration(
-        contentPadding: EdgeInsets.symmetric(horizontal: 25),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 25),
         hintText: "Have a code? type it here...",
-        hintStyle: TextStyle(color: Colors.grey, fontSize: 14),
+        hintStyle: const TextStyle(color: Colors.grey, fontSize: 14),
         suffixIcon: Padding(
-          padding: EdgeInsets.only(right: 15),
+          padding: const EdgeInsets.only(right: 15),
           child: TextButton(
             onPressed: () {},
-            child: Text(
+            child: const Text(
               "Validate",
               style: TextStyle(color: Color(0xFF508A7B), fontSize: 14),
             ),
           ),
         ),
         filled: true,
-        fillColor: Color(0xFFF7F7F8),
-        focusedBorder: OutlineInputBorder(
+        fillColor: const Color(0xFFF7F7F8),
+        focusedBorder: const OutlineInputBorder(
           borderSide: BorderSide(color: Colors.transparent),
           borderRadius: BorderRadius.all(Radius.circular(10)),
         ),
-        enabledBorder: OutlineInputBorder(
+        enabledBorder: const OutlineInputBorder(
           borderSide: BorderSide(color: Colors.transparent),
           borderRadius: BorderRadius.all(Radius.circular(10)),
         ),
-        border: OutlineInputBorder(
+        border: const OutlineInputBorder(
           borderRadius: BorderRadius.all(Radius.circular(10)),
           borderSide: BorderSide.none,
         ),
@@ -244,9 +244,9 @@ class _CheckoutPageShippingState extends State<CheckoutPageShipping> {
                     selectedShipping = newValue!;
                   });
                 },
-                activeColor: Color(0xFF508A7B),
+                activeColor: const Color(0xFF508A7B),
               ),
-              SizedBox(width: 8),
+              const SizedBox(width: 8),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -254,25 +254,25 @@ class _CheckoutPageShippingState extends State<CheckoutPageShipping> {
                     children: [
                       Text(
                         price,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 16,
                         ),
                       ),
-                      SizedBox(width: 10),
+                      const SizedBox(width: 10),
                       Text(
                         title,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 16,
                         ),
                       ),
                     ],
                   ),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   Text(
                     subtitle,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.grey,
                     ),
                   ),

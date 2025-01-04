@@ -16,7 +16,7 @@ class CollectionPage extends StatelessWidget {
           ),
           Container(
             height: MediaQuery.of(context).size.height * 0.35,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/images/main/beauty3.jpg'),
                 fit: BoxFit.cover,
@@ -28,16 +28,16 @@ class CollectionPage extends StatelessWidget {
             left: 16,
             child: Container(
               decoration:
-                  BoxDecoration(color: Colors.white, shape: BoxShape.circle),
+                  const BoxDecoration(color: Colors.white, shape: BoxShape.circle),
               child: IconButton(
-                icon: Icon(Icons.arrow_back, color: Colors.black),
+                icon: const Icon(Icons.arrow_back, color: Colors.black),
                 onPressed: () {
                   Navigator.pop(context);
                 },
               ),
             ),
           ),
-          Positioned(
+          const Positioned(
             top: 150,
             right: 16,
             child: Column(
@@ -67,7 +67,7 @@ class CollectionPage extends StatelessWidget {
             right: 0,
             child: Container(
               height: MediaQuery.of(context).size.height * 0.7,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
               ),
@@ -77,8 +77,8 @@ class CollectionPage extends StatelessWidget {
                   children: [
                     Expanded(
                       child: GridView.builder(
-                        physics: BouncingScrollPhysics(),
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        physics: const BouncingScrollPhysics(),
+                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
                           crossAxisSpacing: 10,
                           mainAxisSpacing: 10,
@@ -89,7 +89,7 @@ class CollectionPage extends StatelessWidget {
                           return Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15),
-                              image: DecorationImage(
+                              image: const DecorationImage(
                                 image: AssetImage(
                                   'assets/images/main/beauty3.jpg',
                                 ),
@@ -100,22 +100,22 @@ class CollectionPage extends StatelessWidget {
                         },
                       ),
                     ),
-                    SizedBox(height: 30),
+                    const SizedBox(height: 30),
                     ElevatedButton(
                       onPressed: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => CollectionItemsPage()));
+                                builder: (context) => const CollectionItemsPage()));
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.black,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15),
                         ),
-                        minimumSize: Size(double.infinity, 50),
+                        minimumSize: const Size(double.infinity, 50),
                       ),
-                      child: Text(
+                      child: const Text(
                         "VIEW ALL",
                         style: TextStyle(color: Colors.white, fontSize: 16),
                       ),

@@ -12,7 +12,7 @@ class CheckoutPageOrderCopmleted extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text(
+        title: const Text(
           "Check out",
           style: TextStyle(
             color: Colors.black,
@@ -27,7 +27,7 @@ class CheckoutPageOrderCopmleted extends StatelessWidget {
           child: GestureDetector(
             onTap: () {},
             child: Container(
-              padding: EdgeInsets.only(left: 10),
+              padding: const EdgeInsets.only(left: 10),
               height: 40,
               width: 40,
               decoration: BoxDecoration(
@@ -38,11 +38,11 @@ class CheckoutPageOrderCopmleted extends StatelessWidget {
                     color: Colors.black.withOpacity(0.1),
                     blurRadius: 10,
                     spreadRadius: 1,
-                    offset: Offset(0, 4),
+                    offset: const Offset(0, 4),
                   ),
                 ],
               ),
-              child: Icon(Icons.arrow_back_ios, color: Colors.black),
+              child: const Icon(Icons.arrow_back_ios, color: Colors.black),
             ),
           ),
         ),
@@ -52,29 +52,29 @@ class CheckoutPageOrderCopmleted extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 30),
         child: Column(
           children: [
-            TrackerCheckout(
+            const TrackerCheckout(
               colorFirstIcon: Colors.black,
               colorSecondIcon: Colors.black,
               colorThirdIcon: Colors.black,
             ),
-            SizedBox(
+            const SizedBox(
               height: 43,
             ),
-            Align(
+            const Align(
               alignment: Alignment.centerLeft,
               child: Text(
                 "Order Completed",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 79,
             ),
             Image.asset('assets/images/checkout/success.png'),
-            SizedBox(
+            const SizedBox(
               height: 55,
             ),
-            Text(
+            const Text(
               "Thank you for your purchase. You can view your order in ‘My Orders’ section.",
               style: TextStyle(
                 fontSize: 14,
@@ -82,17 +82,17 @@ class CheckoutPageOrderCopmleted extends StatelessWidget {
               ),
               textAlign: TextAlign.center,
             ),
-            SizedBox(
+            const SizedBox(
               height: 108,
             ),
             CustomButton(
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => MainPage()));
+                    MaterialPageRoute(builder: (context) => const MainPage()));
               },
               text: "Continue shopping",
               width: double.infinity,
-              color: Color(0xFF343434),
+              color: const Color(0xFF343434),
             ),
           ],
         ),

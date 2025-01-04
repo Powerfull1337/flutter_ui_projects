@@ -83,7 +83,7 @@ class AllOrdersPage extends StatelessWidget {
                     order: order,
                   );
                 }
-                return MainPage();
+                return const MainPage();
               }));
             });
       },

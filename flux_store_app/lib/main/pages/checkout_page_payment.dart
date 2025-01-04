@@ -23,7 +23,7 @@ class _CheckoutPagePaymentState extends State<CheckoutPagePayment> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text(
+        title: const Text(
           "Checkout",
           style: TextStyle(
             color: Colors.black,
@@ -38,7 +38,7 @@ class _CheckoutPagePaymentState extends State<CheckoutPagePayment> {
           child: GestureDetector(
             onTap: () {},
             child: Container(
-              padding: EdgeInsets.only(left: 10),
+              padding: const EdgeInsets.only(left: 10),
               height: 40,
               width: 40,
               decoration: BoxDecoration(
@@ -49,11 +49,11 @@ class _CheckoutPagePaymentState extends State<CheckoutPagePayment> {
                     color: Colors.black.withOpacity(0.1),
                     blurRadius: 10,
                     spreadRadius: 1,
-                    offset: Offset(0, 4),
+                    offset: const Offset(0, 4),
                   ),
                 ],
               ),
-              child: Icon(Icons.arrow_back_ios, color: Colors.black),
+              child: const Icon(Icons.arrow_back_ios, color: Colors.black),
             ),
           ),
         ),
@@ -67,22 +67,22 @@ class _CheckoutPagePaymentState extends State<CheckoutPagePayment> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  TrackerCheckout(
+                  const TrackerCheckout(
                     colorFirstIcon: Colors.black,
                     colorSecondIcon: Colors.black,
                     colorThirdIcon: Colors.grey,
                   ),
-                  SizedBox(height: 29),
-                  Text(
+                  const SizedBox(height: 29),
+                  const Text(
                     "STEP 1",
                     style: TextStyle(fontSize: 11),
                   ),
-                  SizedBox(height: 10),
-                  Text(
+                  const SizedBox(height: 10),
+                  const Text(
                     "Payment",
                     style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: 42),
+                  const SizedBox(height: 42),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -90,20 +90,20 @@ class _CheckoutPagePaymentState extends State<CheckoutPagePayment> {
                           flex: 1,
                           child:
                               _buildPaymentContainer(0, Icons.money, "Cash")),
-                      SizedBox(width: 15),
+                      const SizedBox(width: 15),
                       Expanded(
                           flex: 1,
                           child: _buildPaymentContainer(
                               1, Icons.card_travel, "Credit Card")),
-                      SizedBox(width: 15),
+                      const SizedBox(width: 15),
                       Expanded(
                           flex: 1,
                           child:
                               _buildPaymentContainer(2, Icons.more_horiz, "")),
                     ],
                   ),
-                  SizedBox(height: 52),
-                  Row(
+                  const SizedBox(height: 52),
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text("Choose your card",
@@ -116,15 +116,15 @@ class _CheckoutPagePaymentState extends State<CheckoutPagePayment> {
                               color: Colors.red)),
                     ],
                   ),
-                  SizedBox(height: 30),
+                  const SizedBox(height: 30),
                   SizedBox(
                     height: 200,
                     child: PageView.builder(
                       controller: PageController(viewportFraction: 0.9),
                       itemCount: 2,
                       itemBuilder: (context, index) {
-                        return Padding(
-                          padding: const EdgeInsets.only(right: 20),
+                        return const Padding(
+                          padding: EdgeInsets.only(right: 20),
                           child: CustomCreditCard(
                               imagePath:
                                   'assets/images/main/world_map_blue.jpg',
@@ -136,11 +136,11 @@ class _CheckoutPagePaymentState extends State<CheckoutPagePayment> {
                       },
                     ),
                   ),
-                  SizedBox(height: 44),
-                  Text("or check out with",
+                  const SizedBox(height: 44),
+                  const Text("or check out with",
                       style:
                           TextStyle(fontSize: 12, fontWeight: FontWeight.w400)),
-                  SizedBox(height: 19),
+                  const SizedBox(height: 19),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
@@ -159,7 +159,7 @@ class _CheckoutPagePaymentState extends State<CheckoutPagePayment> {
                 ],
               ),
             ),
-            SizedBox(height: 60),
+            const SizedBox(height: 60),
             Container(
               height: 455,
               decoration: BoxDecoration(
@@ -173,7 +173,7 @@ class _CheckoutPagePaymentState extends State<CheckoutPagePayment> {
                     color: Colors.black.withOpacity(0.2),
                     blurRadius: 10,
                     spreadRadius: 1,
-                    offset: Offset(4, 4),
+                    offset: const Offset(4, 4),
                   ),
                 ],
               ),
@@ -182,7 +182,7 @@ class _CheckoutPagePaymentState extends State<CheckoutPagePayment> {
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                 child: Column(
                   children: [
-                    Row(
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
@@ -201,10 +201,10 @@ class _CheckoutPagePaymentState extends State<CheckoutPagePayment> {
                         )
                       ],
                     ),
-                    SizedBox(height: 20),
-                    Divider(),
-                    SizedBox(height: 20),
-                    Row(
+                    const SizedBox(height: 20),
+                    const Divider(),
+                    const SizedBox(height: 20),
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
@@ -223,10 +223,10 @@ class _CheckoutPagePaymentState extends State<CheckoutPagePayment> {
                         )
                       ],
                     ),
-                    SizedBox(height: 20),
-                    Divider(),
-                    SizedBox(height: 20),
-                    Row(
+                    const SizedBox(height: 20),
+                    const Divider(),
+                    const SizedBox(height: 20),
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
@@ -245,7 +245,7 @@ class _CheckoutPagePaymentState extends State<CheckoutPagePayment> {
                         )
                       ],
                     ),
-                    SizedBox(height: 46),
+                    const SizedBox(height: 46),
                     Row(
                       children: [
                         Checkbox(
@@ -265,7 +265,7 @@ class _CheckoutPagePaymentState extends State<CheckoutPagePayment> {
                           },
                         ),
                         RichText(
-                          text: TextSpan(
+                          text: const TextSpan(
                             text: "I agree to ",
                             style: TextStyle(color: Colors.grey, fontSize: 18),
                             children: <TextSpan>[
@@ -279,18 +279,18 @@ class _CheckoutPagePaymentState extends State<CheckoutPagePayment> {
                         ),
                       ],
                     ),
-                    SizedBox(height: 60),
+                    const SizedBox(height: 60),
                     CustomButton(
                       onTap: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
                                 builder: (context) =>
-                                    CheckoutPageOrderCopmleted()));
+                                    const CheckoutPageOrderCopmleted()));
                       },
                       text: "Place my order",
                       width: double.infinity,
-                      color: Color(0xFF343434),
+                      color: const Color(0xFF343434),
                     ),
                   ],
                 ),
@@ -305,7 +305,7 @@ class _CheckoutPagePaymentState extends State<CheckoutPagePayment> {
   Container _buildAnotherPaymentMethod(String imagePath) {
     return Container(
       width: 50,
-      padding: EdgeInsets.symmetric(vertical: 5),
+      padding: const EdgeInsets.symmetric(vertical: 5),
       height: 34,
       decoration: BoxDecoration(
         border: Border.all(
@@ -341,11 +341,11 @@ class _CheckoutPagePaymentState extends State<CheckoutPagePayment> {
               color: Colors.grey.shade600,
               blurRadius: 10,
               spreadRadius: 1,
-              offset: Offset(4, 4),
+              offset: const Offset(4, 4),
             ),
           ],
           color: _selectedPaymentContainerIndex == index
-              ? Color(0xFF43484B)
+              ? const Color(0xFF43484B)
               : Colors.white,
           borderRadius: BorderRadius.circular(6),
         ),
@@ -356,7 +356,7 @@ class _CheckoutPagePaymentState extends State<CheckoutPagePayment> {
               icon,
               color: _selectedPaymentContainerIndex == index
                   ? Colors.white
-                  : Color(0xFF6E768A),
+                  : const Color(0xFF6E768A),
             ),
             if (text != null && text.isNotEmpty)
               Text(
@@ -364,7 +364,7 @@ class _CheckoutPagePaymentState extends State<CheckoutPagePayment> {
                 style: TextStyle(
                   color: _selectedPaymentContainerIndex == index
                       ? Colors.white
-                      : Color(0xFF6E768A),
+                      : const Color(0xFF6E768A),
                 ),
               ),
           ],

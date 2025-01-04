@@ -7,10 +7,10 @@ class SocialCircle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double heightWidht = 50;
+    const double heightWidht = 50;
 
     return Container(
-      padding: EdgeInsets.all(10),
+      padding: const EdgeInsets.all(10),
       height: heightWidht,
       width: heightWidht,
       decoration: BoxDecoration(

@@ -20,17 +20,17 @@ class CartItem extends StatelessWidget {
             BoxShadow(
               color: Colors.black.withOpacity(0.2),
               blurRadius: 1,
-              offset: Offset(0, 1),
+              offset: const Offset(0, 1),
             ),
           ],
         ),
         child: Row(
           children: [
-            Container(
+            SizedBox(
               height: 100,
               width: 100,
               child: ClipRRect(
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(24),
                     bottomLeft: Radius.circular(24)),
                 child: Image.asset(
@@ -50,11 +50,11 @@ class CartItem extends StatelessWidget {
                       children: [
                         Text(product.title),
                         Container(
-                            padding: EdgeInsets.all(3),
+                            padding: const EdgeInsets.all(3),
                             decoration: BoxDecoration(
-                                color: Color(0xFF508A7B),
+                                color: const Color(0xFF508A7B),
                                 borderRadius: BorderRadius.circular(6)),
-                            child: Icon(
+                            child: const Icon(
                               Icons.done,
                               color: Colors.white,
                             )),
@@ -64,14 +64,14 @@ class CartItem extends StatelessWidget {
                         alignment: Alignment.centerLeft,
                         child: Text(
                           "\$ ${product.price.toString()}",
-                          style: TextStyle(
+                          style: const TextStyle(
                               fontSize: 16, fontWeight: FontWeight.bold),
                         )),
-                    SizedBox(height: 2),
+                    const SizedBox(height: 2),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Row(
+                        const Row(
                           children: [
                             Text("Size: M"),
                             SizedBox(width: 6),
@@ -80,11 +80,11 @@ class CartItem extends StatelessWidget {
                         ),
                         Container(
                           padding:
-                              EdgeInsets.symmetric(vertical: 3, horizontal: 5),
+                              const EdgeInsets.symmetric(vertical: 3, horizontal: 5),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
                               border: Border.all(width: 1, color: Colors.grey)),
-                          child: Row(
+                          child: const Row(
                             children: [
                               Icon(
                                 Icons.close,

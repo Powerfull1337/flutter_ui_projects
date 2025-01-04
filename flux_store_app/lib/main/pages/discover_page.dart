@@ -10,7 +10,7 @@ class DiscoverPage extends StatefulWidget {
 }
 
 class _DiscoverPageState extends State<DiscoverPage> {
-  List<bool> _isExpanded = List.generate(4, (_) => false);
+  final List<bool> _isExpanded = List.generate(4, (_) => false);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +18,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
       body: SingleChildScrollView(
         child: SafeArea(
             child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 30, vertical: 30),
+          padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
           child: Column(
             children: [
               // Row(
@@ -40,13 +40,13 @@ class _DiscoverPageState extends State<DiscoverPage> {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => SearchPage()),
+                          MaterialPageRoute(builder: (context) => const SearchPage()),
                         );
                       },
                       child: AbsorbPointer(
                         child: TextField(
                           decoration: InputDecoration(
-                            prefixIcon: Icon(Icons.search),
+                            prefixIcon: const Icon(Icons.search),
                             fillColor: Colors.grey.withOpacity(0.1),
                             filled: true,
                             border: OutlineInputBorder(
@@ -54,31 +54,31 @@ class _DiscoverPageState extends State<DiscoverPage> {
                               borderSide: BorderSide.none,
                             ),
                             hintText: 'Search...',
-                            contentPadding: EdgeInsets.symmetric(
+                            contentPadding: const EdgeInsets.symmetric(
                                 vertical: 12, horizontal: 16),
                           ),
                         ),
                       ),
                     ),
                   ),
-                  SizedBox(width: 16),
+                  const SizedBox(width: 16),
                   Container(
-                    padding: EdgeInsets.all(15),
+                    padding: const EdgeInsets.all(15),
                     decoration: BoxDecoration(
                       color: Colors.grey.withOpacity(0.1),
                       borderRadius: BorderRadius.circular(18),
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Icon(Icons.tune),
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
               SizedBox(
                 child: ListView.builder(
                   shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   itemCount: listOfTypes.length,
                   itemBuilder: (context, index) {
                     final type = listOfTypes[index];
@@ -107,7 +107,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
                                     padding: const EdgeInsets.only(left: 30),
                                     child: Text(
                                       type.name,
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         fontSize: 18,
                                         color: Colors.white,
                                         fontWeight: FontWeight.bold,
@@ -150,13 +150,13 @@ class _DiscoverPageState extends State<DiscoverPage> {
                           SizedBox(
                             child: ListView.builder(
                               shrinkWrap: true,
-                              physics: NeverScrollableScrollPhysics(),
+                              physics: const NeverScrollableScrollPhysics(),
                               itemCount: 6,
                               itemBuilder: (context, index) {
                                 return Column(
                                   children: [
                                     ListTile(
-                                      title: Text(
+                                      title: const Text(
                                         "Dresses",
                                         style: TextStyle(
                                           fontSize: 16,
@@ -169,14 +169,14 @@ class _DiscoverPageState extends State<DiscoverPage> {
                                         children: [
                                           Text(
                                             "${index * 100} Items",
-                                            style: TextStyle(
+                                            style: const TextStyle(
                                               fontSize: 14,
                                               color: Colors.grey,
                                               fontWeight: FontWeight.w300,
                                             ),
                                           ),
-                                          SizedBox(width: 10),
-                                          Icon(
+                                          const SizedBox(width: 10),
+                                          const Icon(
                                             Icons.arrow_forward_ios,
                                             size: 20,
                                           ),
@@ -193,7 +193,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
                               },
                             ),
                           ),
-                        SizedBox(height: 20)
+                        const SizedBox(height: 20)
                       ],
                     );
                   },

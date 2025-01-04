@@ -25,7 +25,7 @@ class CustomCreditCard extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             color: Colors.black26,
             blurRadius: 10,
@@ -66,7 +66,7 @@ class CustomCreditCard extends StatelessWidget {
                   ),
                   Text(
                     formatCardNumber(cardNumber),
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 20,
                       letterSpacing: 2,
@@ -79,17 +79,17 @@ class CustomCreditCard extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             'CARDHOLDER NAME',
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 9,
                                 fontWeight: FontWeight.w800),
                           ),
-                          SizedBox(height: 4),
+                          const SizedBox(height: 4),
                           Text(
                             cardHolderName,
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Colors.white,
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
@@ -100,7 +100,7 @@ class CustomCreditCard extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
-                          Text(
+                          const Text(
                             'VALID THRU',
                             style: TextStyle(
                               color: Colors.white,
@@ -108,10 +108,10 @@ class CustomCreditCard extends StatelessWidget {
                               fontWeight: FontWeight.w800,
                             ),
                           ),
-                          SizedBox(height: 4),
+                          const SizedBox(height: 4),
                           Text(
                             validThru,
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Colors.white,
                               fontSize: 16,
                               fontWeight: FontWeight.bold,

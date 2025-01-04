@@ -16,13 +16,13 @@ class OrderCard extends StatelessWidget {
 
     switch (order.status) {
       case "DELIVERED":
-        statusColor = Color(0xFF009254);
+        statusColor = const Color(0xFF009254);
         break;
       case "CANCELLED":
-        statusColor = Color(0xFFC50000);
+        statusColor = const Color(0xFFC50000);
         break;
       case "PENDING":
-        statusColor = Color(0xFFCF6212);
+        statusColor = const Color(0xFFCF6212);
         break;
       default:
         statusColor = Colors.black;
@@ -42,7 +42,7 @@ class OrderCard extends StatelessWidget {
                 color: Colors.black.withOpacity(0.2),
                 blurRadius: 10,
                 spreadRadius: 1,
-                offset: Offset(4, 4),
+                offset: const Offset(4, 4),
               ),
             ]),
         child: Padding(
@@ -54,21 +54,21 @@ class OrderCard extends StatelessWidget {
                 children: [
                   Text(
                     "Order #${order.orderId}",
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    "${formatedDate}",
-                    style: TextStyle(
+                    formatedDate,
+                    style: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w400,
                         color: Color(0xFF43484B)),
                   ),
                 ],
               ),
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
               Row(
                 children: [
-                  Text(
+                  const Text(
                     "Tracking number: ",
                     style: TextStyle(
                         fontSize: 14,
@@ -76,20 +76,20 @@ class OrderCard extends StatelessWidget {
                         color: Color(0xFF43484B)),
                   ),
                   Text(
-                    "${order.trackingNumber}",
-                    style: TextStyle(
+                    order.trackingNumber,
+                    style: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w500,
                         color: Colors.black),
                   ),
                 ],
               ),
-              SizedBox(height: 13),
+              const SizedBox(height: 13),
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                 RichText(
                   text: TextSpan(
                     children: [
-                      TextSpan(
+                      const TextSpan(
                         text: "Quantity: ",
                         style: TextStyle(
                           fontSize: 14,
@@ -99,7 +99,7 @@ class OrderCard extends StatelessWidget {
                       ),
                       TextSpan(
                         text: "${order.quantity}",
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w500,
                           color: Colors.black,
@@ -111,7 +111,7 @@ class OrderCard extends StatelessWidget {
                 RichText(
                   text: TextSpan(
                     children: [
-                      TextSpan(
+                      const TextSpan(
                         text: "Subtotal: ",
                         style: TextStyle(
                           fontSize: 14,
@@ -121,7 +121,7 @@ class OrderCard extends StatelessWidget {
                       ),
                       TextSpan(
                         text: "\$${order.subtotal}",
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
                           color: Colors.black,
@@ -131,12 +131,12 @@ class OrderCard extends StatelessWidget {
                   ),
                 )
               ]),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "${order.status}",
+                    order.status,
                     style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w400,
@@ -150,8 +150,8 @@ class OrderCard extends StatelessWidget {
                             border: Border.all(color: Colors.grey),
                             borderRadius: BorderRadius.circular(17.5)),
                         padding:
-                            EdgeInsets.symmetric(vertical: 7, horizontal: 25),
-                        child: Center(
+                            const EdgeInsets.symmetric(vertical: 7, horizontal: 25),
+                        child: const Center(
                           child: Text("Details"),
                         ),
                       ),

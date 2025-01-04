@@ -38,7 +38,7 @@ class _MainPageState extends State<MainPage> {
         onPageChanged: (value) {
           setState(() => _selectedPageIndex = value);
         },
-        children: [
+        children: const [
           HomePage(),
           DiscoverPage(),
           AllOrdersPage(),
@@ -46,7 +46,7 @@ class _MainPageState extends State<MainPage> {
         ],
       ),
       bottomNavigationBar: ClipRRect(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+        borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
         child: BottomNavigationBar(
             
             backgroundColor: Colors.white,
@@ -54,8 +54,8 @@ class _MainPageState extends State<MainPage> {
             unselectedItemColor: Colors.grey,
             selectedItemColor: Colors.black,
             onTap: _selectPage,
-            items: [
-              BottomNavigationBarItem(
+            items: const [
+              BottomNavigationBarItem(   
                 icon: Icon(Icons.home),
                 label: '',
               ),
@@ -84,8 +84,8 @@ class _MainPageState extends State<MainPage> {
         padding: const EdgeInsets.symmetric(horizontal: 13),
         child: Column(
           children: [
-            SizedBox(height: 68),
-            Row(
+            const SizedBox(height: 68),
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CircleAvatar(
@@ -112,34 +112,34 @@ class _MainPageState extends State<MainPage> {
                 )
               ],
             ),
-            SizedBox(height: 71),
+            const SizedBox(height: 71),
             DrawerTile(
-              title: Text("Home Page"),
+              title: const Text("Home Page"),
               icon: Icons.home,
               onTap: () => _selectPage(0),
               isSelected: _selectedPageIndex == 0,
             ),
             DrawerTile(
-              title: Text("Discover"),
+              title: const Text("Discover"),
               icon: Icons.search,
               onTap: () => _selectPage(1),
               isSelected: _selectedPageIndex == 1,
             ),
             DrawerTile(
-              title: Text("My Order"),
+              title: const Text("My Order"),
               icon: Icons.badge,
               onTap: () => _selectPage(2),
               isSelected: _selectedPageIndex == 2,
             ),
             DrawerTile(
-              title: Text("Profile"),
+              title: const Text("Profile"),
               icon: Icons.person,
               onTap: () => _selectPage(3),
               isSelected: _selectedPageIndex == 3,
             ),
-            SizedBox(height: 24),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+            const SizedBox(height: 24),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Text("OTHER",
@@ -149,35 +149,35 @@ class _MainPageState extends State<MainPage> {
                         fontWeight: FontWeight.w400)),
               ),
             ),
-            SizedBox(height: 24),
+            const SizedBox(height: 24),
             DrawerTile(
-              title: Text("Settings"),
+              title: const Text("Settings"),
               icon: Icons.settings,
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => SettingsPage()));
+                    MaterialPageRoute(builder: (context) => const SettingsPage()));
               },
               isSelected: false,
             ),
             DrawerTile(
-              title: Text("Support"),
+              title: const Text("Support"),
               icon: Icons.support_agent_outlined,
               onTap: () {},
               isSelected: _selectedPageIndex == 5,
             ),
             DrawerTile(
-              title: Text("About us"),
+              title: const Text("About us"),
               icon: Icons.info,
               onTap: () {},
               isSelected: _selectedPageIndex == 6,
             ),
-            SizedBox(height: 24),
+            const SizedBox(height: 24),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Container(
-                  padding: EdgeInsets.all(5),
+                  padding: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
                       color: Colors.grey.withOpacity(0.2),
                       borderRadius: BorderRadius.circular(20)),
@@ -192,7 +192,7 @@ class _MainPageState extends State<MainPage> {
                         },
                         child: Container(
                           padding:
-                              EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                              const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                           decoration: BoxDecoration(
                             color:
                                 isLightMode ? Colors.white : Colors.transparent,
@@ -202,7 +202,7 @@ class _MainPageState extends State<MainPage> {
                                     BoxShadow(
                                       color: Colors.black.withOpacity(0.1),
                                       blurRadius: 4,
-                                      offset: Offset(0, 2),
+                                      offset: const Offset(0, 2),
                                     ),
                                   ]
                                 : [],
@@ -212,7 +212,7 @@ class _MainPageState extends State<MainPage> {
                               Icon(Icons.light_mode,
                                   color:
                                       isLightMode ? Colors.black : Colors.grey),
-                              SizedBox(width: 4),
+                              const SizedBox(width: 4),
                               Text(
                                 'Light',
                                 style: TextStyle(
@@ -232,7 +232,7 @@ class _MainPageState extends State<MainPage> {
                         },
                         child: Container(
                           padding:
-                              EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                              const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                           decoration: BoxDecoration(
                             color: !isLightMode
                                 ? Colors.white
@@ -243,7 +243,7 @@ class _MainPageState extends State<MainPage> {
                                     BoxShadow(
                                       color: Colors.black.withOpacity(0.1),
                                       blurRadius: 4,
-                                      offset: Offset(0, 2),
+                                      offset: const Offset(0, 2),
                                     ),
                                   ]
                                 : [],
@@ -254,7 +254,7 @@ class _MainPageState extends State<MainPage> {
                                   color: !isLightMode
                                       ? Colors.black
                                       : Colors.grey),
-                              SizedBox(width: 4),
+                              const SizedBox(width: 4),
                               Text(
                                 'Dark',
                                 style: TextStyle(
@@ -311,7 +311,7 @@ class _MainPageState extends State<MainPage> {
       backgroundColor: Colors.white,
       title: Text(
         title,
-        style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+        style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
       ),
       actions: [
         Padding(
@@ -321,7 +321,7 @@ class _MainPageState extends State<MainPage> {
             icon: const Icon(Icons.notifications),
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => NotificationPage()));
+                  MaterialPageRoute(builder: (context) => const NotificationPage()));
             },
           ),
         ),

@@ -20,9 +20,9 @@ class CartPage extends StatelessWidget {
                     const EdgeInsets.symmetric(horizontal: 25, vertical: 35),
                 child: Column(
                   children: [
-                    Row(
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
+                      children: [
                         Icon(Icons.menu),
                         Expanded(
                           child: Center(
@@ -64,13 +64,13 @@ class CartPage extends StatelessWidget {
                       color: Colors.black.withOpacity(0.2),
                       blurRadius: 10,
                       spreadRadius: 1,
-                      offset: Offset(4, 4),
+                      offset: const Offset(4, 4),
                     ),
                   ],
                 ),
-                child: Padding(
+                child: const Padding(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                      EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                   child: Column(
                     children: [
                       Row(

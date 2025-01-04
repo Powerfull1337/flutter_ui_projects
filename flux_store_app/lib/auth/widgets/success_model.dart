@@ -10,7 +10,7 @@ class SuccessModal extends StatelessWidget {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.vertical(top: Radius.circular(40)),
       ),
@@ -25,25 +25,25 @@ class SuccessModal extends StatelessWidget {
                 color: Colors.grey[300],
               ),
               child: Image.asset('assets/images/auth/success.png')),
-          SizedBox(height: 40),
-          Text(
+          const SizedBox(height: 40),
+          const Text(
             "Your password has been changed",
             style: TextStyle(
                 fontSize: 17, color: Colors.black, fontWeight: FontWeight.w400),
           ),
-          SizedBox(height: 20),
-          Text(
+          const SizedBox(height: 20),
+          const Text(
             "Welcome back! Discover now!",
             style: TextStyle(
                 fontSize: 12, color: Colors.grey, fontWeight: FontWeight.w400),
           ),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           CustomButton(
             text: "Browse home",
             width: double.infinity,
             onTap: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => MainPage()));
+                  context, MaterialPageRoute(builder: (context) => const MainPage()));
             },
           )
         ],

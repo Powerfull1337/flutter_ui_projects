@@ -27,13 +27,13 @@ class ChangePasswordPage extends StatelessWidget {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
                         border: Border.all(width: 0.5, color: Colors.grey)),
-                    child: Center(child: Icon(Icons.arrow_back)),
+                    child: const Center(child: Icon(Icons.arrow_back)),
                   ),
                 ),
               ],
             ),
-            SizedBox(height: 40),
-            Align(
+            const SizedBox(height: 40),
+            const Align(
               alignment: Alignment.centerLeft,
               child: Text(
                 "Create new password",
@@ -43,8 +43,8 @@ class ChangePasswordPage extends StatelessWidget {
                     fontWeight: FontWeight.bold),
               ),
             ),
-            SizedBox(height: 20),
-            Align(
+            const SizedBox(height: 20),
+            const Align(
               alignment: Alignment.centerLeft,
               child: Text(
                 "Your new password must be different from previously used password",
@@ -54,17 +54,17 @@ class ChangePasswordPage extends StatelessWidget {
                     fontWeight: FontWeight.w400),
               ),
             ),
-            SizedBox(height: 60),
-            AuthField(
+            const SizedBox(height: 60),
+            const AuthField(
                 hintText: "Password",
                 suffixIcon: Icon(Icons.visibility),
                 labelText: "Password"),
-            SizedBox(height: 20),
-            AuthField(
+            const SizedBox(height: 20),
+            const AuthField(
                 hintText: "Confirm password",
                 suffixIcon: Icon(Icons.visibility_off),
                 labelText: "Confrim Password"),
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             CustomButton(
                 text: "Confirm",
                 onTap: () {
@@ -79,7 +79,7 @@ class ChangePasswordPage extends StatelessWidget {
                     builder: (BuildContext context) {
                       return Padding(
                         padding: MediaQuery.of(context).viewInsets,
-                        child: SuccessModal(),
+                        child: const SuccessModal(),
                       );
                     },
                   );

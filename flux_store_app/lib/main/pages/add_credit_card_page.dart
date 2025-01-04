@@ -18,7 +18,7 @@ class AddCreditCardPage extends StatelessWidget {
               Navigator.pop(context);
             },
             child: Container(
-              padding: EdgeInsets.only(left: 10),
+              padding: const EdgeInsets.only(left: 10),
               height: 40,
               width: 40,
               decoration: BoxDecoration(
@@ -29,22 +29,22 @@ class AddCreditCardPage extends StatelessWidget {
                     color: Colors.black.withOpacity(0.1),
                     blurRadius: 10,
                     spreadRadius: 1,
-                    offset: Offset(0, 4),
+                    offset: const Offset(0, 4),
                   ),
                 ],
               ),
-              child: Icon(Icons.arrow_back_ios, color: Colors.black),
+              child: const Icon(Icons.arrow_back_ios, color: Colors.black),
             ),
           ),
         ),
         backgroundColor: Colors.white,
         toolbarHeight: 100,
         centerTitle: true,
-        title: Text("Add new card"),
+        title: const Text("Add new card"),
       ),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
+          padding: EdgeInsets.symmetric(horizontal: 24),
           child: Column(
             children: [
               CustomCreditCard(

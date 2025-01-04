@@ -36,11 +36,11 @@ class WishlistPage extends StatelessWidget {
                         color: Colors.black,
                         border: Border.all(color: Colors.black),
                       ),
-                      labelStyle: TextStyle(
+                      labelStyle: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
-                      tabs: [
+                      tabs: const [
                         Tab(text: "All items"),
                         Tab(text: "Boards"),
                       ],
@@ -91,10 +91,10 @@ class _BoardsTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
       child: ListView.builder(itemBuilder: (context, index) {
-        return Padding(
-          padding: const EdgeInsets.only(bottom: 10.0),
+        return const Padding(
+          padding: EdgeInsets.only(bottom: 10.0),
           child: BoardCard(),
         );
       }),

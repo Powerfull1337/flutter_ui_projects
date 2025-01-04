@@ -19,7 +19,7 @@ class NotificationConteiner extends StatelessWidget {
                 color: Colors.black.withOpacity(0.1),
                 blurRadius: 10,
                 spreadRadius: 1,
-                offset: Offset(0, 4),
+                offset: const Offset(0, 4),
               ),
             ]),
         child: Padding(
@@ -29,15 +29,15 @@ class NotificationConteiner extends StatelessWidget {
             children: [
               Text(
                 notificationMessage.title,
-                style: TextStyle(
+                style: const TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w400,
                     color: Colors.black),
               ),
-              SizedBox(height: 4),
+              const SizedBox(height: 4),
               Text(
                 notificationMessage.text,
-                style: TextStyle(
+                style: const TextStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w400,
                     color: Colors.grey),

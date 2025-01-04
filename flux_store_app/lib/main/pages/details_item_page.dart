@@ -31,7 +31,7 @@ class _DetailsItemPageState extends State<DetailsItemPage> {
               children: [
                 Stack(
                   children: [
-                    Container(
+                    SizedBox(
                       width: double.infinity,
                       height: MediaQuery.of(context).size.height * 0.4,
                       child: Image.asset(
@@ -132,7 +132,7 @@ class _DetailsItemPageState extends State<DetailsItemPage> {
                               color: Color(0xFF508A7B),
                             ),
                             onRatingUpdate: (rating) {
-                              print(rating);
+                             
                             },
                             ignoreGestures: true,
                           ),
@@ -278,17 +278,17 @@ class _DetailsItemPageState extends State<DetailsItemPage> {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Row(
+                                    const Row(
                                       children: [
-                                        const Text(
+                                        Text(
                                           '4.9',
                                           style: TextStyle(
                                             fontSize: 48,
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
-                                        const SizedBox(width: 10),
-                                        const Text('OUT OF 5'),
+                                        SizedBox(width: 10),
+                                        Text('OUT OF 5'),
                                       ],
                                     ),
                                     Column(
@@ -311,7 +311,7 @@ class _DetailsItemPageState extends State<DetailsItemPage> {
                                             color: Color(0xFF508A7B),
                                           ),
                                           onRatingUpdate: (rating) {
-                                            print(rating);
+                                       
                                           },
                                           ignoreGestures: true,
                                         ),
@@ -400,9 +400,9 @@ class _DetailsItemPageState extends State<DetailsItemPage> {
                     topRight: Radius.circular(30),
                   ),
                 ),
-                child: Row(
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
+                  children: [
                     Icon(
                       Icons.shopping_bag_outlined,
                       color: Colors.white,
@@ -438,7 +438,7 @@ class _DetailsItemPageState extends State<DetailsItemPage> {
           child: LinearProgressIndicator(
             value: percentage / 100,
             backgroundColor: Colors.grey.shade300,
-            color: Color(0xFF508A7B),
+            color: const Color(0xFF508A7B),
             minHeight: 8,
           ),
         ),
@@ -480,7 +480,7 @@ class _DetailsItemPageState extends State<DetailsItemPage> {
                           color: Color(0xFF508A7B),
                         ),
                         onRatingUpdate: (rating) {
-                          print(rating);
+        
                         },
                         ignoreGestures: true,
                       ),

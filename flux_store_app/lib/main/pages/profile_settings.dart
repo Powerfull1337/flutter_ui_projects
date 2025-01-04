@@ -14,7 +14,7 @@ class ProfileSettings extends StatelessWidget {
           child: GestureDetector(
             onTap: () {},
             child: Container(
-              padding: EdgeInsets.only(left: 10),
+              padding: const EdgeInsets.only(left: 10),
               height: 40,
               width: 40,
               decoration: BoxDecoration(
@@ -25,61 +25,59 @@ class ProfileSettings extends StatelessWidget {
                     color: Colors.black.withOpacity(0.1),
                     blurRadius: 10,
                     spreadRadius: 1,
-                    offset: Offset(0, 4),
+                    offset: const Offset(0, 4),
                   ),
                 ],
               ),
-              child: Icon(Icons.arrow_back_ios, color: Colors.black),
+              child: const Icon(Icons.arrow_back_ios, color: Colors.black),
             ),
           ),
         ),
         backgroundColor: Colors.white,
         toolbarHeight: 100,
         centerTitle: true,
-        title: Text("Profile Setting"),
+        title: const Text("Profile Setting"),
       ),
       backgroundColor: Colors.white,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 31),
         child: Column(
           children: [
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  child: Stack(
-                    children: [
-                      CircleAvatar(
-                        backgroundColor: Colors.transparent,
-                        radius: 70,
-                        backgroundImage:
-                            AssetImage('assets/images/intro/welcome.png'),
-                      ),
-                      Positioned(
-                        bottom: 0,
-                        right: 1,
-                        child: Container(
-                          height: 60,
-                          width: 60,
-                          decoration: BoxDecoration(
-                              color: Color(0xFF353945), shape: BoxShape.circle),
-                          child: GestureDetector(
-                            onTap: () {},
-                            child: Icon(
-                              Icons.camera_alt_outlined,
-                              color: Colors.white,
-                            ),
+                Stack(
+                  children: [
+                    const CircleAvatar(
+                      backgroundColor: Colors.transparent,
+                      radius: 70,
+                      backgroundImage:
+                          AssetImage('assets/images/intro/welcome.png'),
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      right: 1,
+                      child: Container(
+                        height: 60,
+                        width: 60,
+                        decoration: const BoxDecoration(
+                            color: Color(0xFF353945), shape: BoxShape.circle),
+                        child: GestureDetector(
+                          onTap: () {},
+                          child: const Icon(
+                            Icons.camera_alt_outlined,
+                            color: Colors.white,
                           ),
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ],
             ),
-            SizedBox(height: 50),
-            Row(
+            const SizedBox(height: 50),
+            const Row(
               children: [
                 Expanded(
                   flex: 2,
@@ -100,17 +98,17 @@ class ProfileSettings extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
-            CheckoutTextField(
+            const CheckoutTextField(
               labelText: "Email",
               isArsterisk: false,
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
-            Row(
+            const Row(
               children: [
                 Expanded(
                   flex: 1,
@@ -131,10 +129,10 @@ class ProfileSettings extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 121,
             ),
-            CustomButton(text: "Save change")
+            const CustomButton(text: "Save change")
           ],
         ),
       ),

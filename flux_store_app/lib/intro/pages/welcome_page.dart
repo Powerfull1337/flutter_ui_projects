@@ -8,7 +8,7 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      body: SizedBox(
         height: double.infinity,
         width: double.infinity,
         child: Stack(
@@ -29,7 +29,7 @@ class WelcomePage extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Row(
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
@@ -41,24 +41,24 @@ class WelcomePage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 10),
-                  Text(
+                  const SizedBox(height: 10),
+                  const Text(
                     "The home for a fashionista",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 16,
                         color: Colors.white),
                   ),
-                  SizedBox(height: 50),
+                  const SizedBox(height: 50),
                   IntroButton(
                       buttonText: "Get Started",
                       onPressed: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => IntroPageFirst()));
+                                builder: (context) => const IntroPageFirst()));
                       }),
-                  SizedBox(height: 50),
+                  const SizedBox(height: 50),
                 ],
               ),
             )

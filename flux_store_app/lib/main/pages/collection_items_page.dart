@@ -16,7 +16,7 @@ class CollectionItemsPage extends StatelessWidget {
           ),
           Container(
             height: MediaQuery.of(context).size.height * 0.35,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/images/main/beauty3.jpg'),
                 fit: BoxFit.cover,
@@ -28,16 +28,16 @@ class CollectionItemsPage extends StatelessWidget {
             left: 16,
             child: Container(
               decoration:
-                  BoxDecoration(color: Colors.white, shape: BoxShape.circle),
+                  const BoxDecoration(color: Colors.white, shape: BoxShape.circle),
               child: IconButton(
-                icon: Icon(Icons.arrow_back, color: Colors.black),
+                icon: const Icon(Icons.arrow_back, color: Colors.black),
                 onPressed: () {
                   Navigator.pop(context);
                 },
               ),
             ),
           ),
-          Positioned(
+          const Positioned(
             top: 150,
             right: 16,
             child: Column(
@@ -67,7 +67,7 @@ class CollectionItemsPage extends StatelessWidget {
             right: 0,
             child: Container(
               height: MediaQuery.of(context).size.height * 0.7,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
               ),

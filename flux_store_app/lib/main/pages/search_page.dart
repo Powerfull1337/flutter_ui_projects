@@ -11,7 +11,7 @@ class SearchPage extends StatefulWidget {
 
 class _SearchPageState extends State<SearchPage> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-  RangeValues _priceRange = RangeValues(10, 80);
+  RangeValues _priceRange = const RangeValues(10, 80);
   int? selectedIndex;
   List<String> searches = [
     "Sunglasses",
@@ -30,7 +30,7 @@ class _SearchPageState extends State<SearchPage> {
       body: SingleChildScrollView(
         child: SafeArea(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 30),
+            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
             child: Column(
               children: [
                 Row(
@@ -50,11 +50,11 @@ class _SearchPageState extends State<SearchPage> {
                             BoxShadow(
                               color: Colors.black.withOpacity(0.1),
                               blurRadius: 8,
-                              offset: Offset(0, 2),
+                              offset: const Offset(0, 2),
                             ),
                           ],
                         ),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           color: Colors.black,
                           size: 20,
@@ -63,13 +63,13 @@ class _SearchPageState extends State<SearchPage> {
                     ),
                   ],
                 ),
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
                 Row(
                   children: [
                     Expanded(
                       child: TextField(
                         decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.search),
+                          prefixIcon: const Icon(Icons.search),
                           fillColor: Colors.grey.withOpacity(0.1),
                           filled: true,
                           border: OutlineInputBorder(
@@ -77,34 +77,34 @@ class _SearchPageState extends State<SearchPage> {
                             borderSide: BorderSide.none,
                           ),
                           hintText: 'Search...',
-                          contentPadding: EdgeInsets.symmetric(
+                          contentPadding: const EdgeInsets.symmetric(
                               vertical: 12, horizontal: 16),
                         ),
                       ),
                     ),
-                    SizedBox(width: 16),
+                    const SizedBox(width: 16),
                     GestureDetector(
                       onTap: () {
                         _scaffoldKey.currentState?.openEndDrawer();
                       },
                       child: Container(
-                        padding: EdgeInsets.all(15),
+                        padding: const EdgeInsets.all(15),
                         decoration: BoxDecoration(
                           color: Colors.grey.withOpacity(0.1),
                           borderRadius: BorderRadius.circular(18),
                         ),
-                        child: Center(
+                        child: const Center(
                           child: Icon(Icons.tune),
                         ),
                       ),
                     ),
                   ],
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
+                    const Text(
                       "Recent Searches",
                       style: TextStyle(
                         fontSize: 18,
@@ -118,21 +118,21 @@ class _SearchPageState extends State<SearchPage> {
                           searches.clear();
                         });
                       },
-                      child: Icon(
+                      child: const Icon(
                         Icons.delete_outline_sharp,
                         color: Colors.grey,
                       ),
                     ),
                   ],
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Wrap(
                   spacing: 5,
                   runSpacing: 5,
                   children: searches.map((search) {
                     return Container(
                       padding:
-                          EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+                          const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
                       decoration: BoxDecoration(
                         color: Colors.grey.withOpacity(0.1),
                         borderRadius: BorderRadius.circular(24),
@@ -142,20 +142,20 @@ class _SearchPageState extends State<SearchPage> {
                         children: [
                           Text(
                             search,
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Colors.grey,
                               fontWeight: FontWeight.bold,
                               fontSize: 16,
                             ),
                           ),
-                          SizedBox(width: 10),
+                          const SizedBox(width: 10),
                           GestureDetector(
                             onTap: () {
                               setState(() {
                                 searches.remove(search);
                               });
                             },
-                            child: Icon(
+                            child: const Icon(
                               Icons.close,
                               color: Colors.grey,
                             ),
@@ -166,7 +166,7 @@ class _SearchPageState extends State<SearchPage> {
                   }).toList(),
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.20),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
@@ -180,7 +180,7 @@ class _SearchPageState extends State<SearchPage> {
                     )
                   ],
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 SizedBox(
                   height: 250,
                   width: double.infinity,
@@ -221,7 +221,7 @@ class _SearchPageState extends State<SearchPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "Filter",
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
@@ -229,17 +229,17 @@ class _SearchPageState extends State<SearchPage> {
                   onTap: () {
                     Navigator.pop(context);
                   },
-                  child: Icon(
+                  child: const Icon(
                     Icons.tune,
                     size: 24,
                   ),
                 )
               ],
             ),
-            SizedBox(height: 30),
-            Divider(),
-            SizedBox(height: 30),
-            Text(
+            const SizedBox(height: 30),
+            const Divider(),
+            const SizedBox(height: 30),
+            const Text(
               "Price",
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
@@ -260,29 +260,29 @@ class _SearchPageState extends State<SearchPage> {
                 });
               },
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   "Min: \$${_priceRange.start.round()}",
-                  style: TextStyle(fontSize: 18, color: Colors.grey),
+                  style: const TextStyle(fontSize: 18, color: Colors.grey),
                 ),
                 Text(
                   "Max: \$${_priceRange.end.round()}",
-                  style: TextStyle(fontSize: 18, color: Colors.grey),
+                  style: const TextStyle(fontSize: 18, color: Colors.grey),
                 ),
               ],
             ),
-            SizedBox(height: 30),
-            Align(
+            const SizedBox(height: 30),
+            const Align(
               alignment: Alignment.centerLeft,
               child: Text(
                 "Color",
                 style: TextStyle(fontSize: 18, color: Colors.black),
               ),
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             Wrap(
               spacing: 20,
               runSpacing: 10,
@@ -308,15 +308,15 @@ class _SearchPageState extends State<SearchPage> {
                   ),
               ],
             ),
-            SizedBox(height: 30),
-            Align(
+            const SizedBox(height: 30),
+            const Align(
               alignment: Alignment.centerLeft,
               child: Text(
                 "Star Rating",
                 style: TextStyle(fontSize: 18, color: Colors.black),
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Wrap(
               spacing: 10,
               children: List.generate(5, (index) {
@@ -332,7 +332,7 @@ class _SearchPageState extends State<SearchPage> {
                         color: isSelected ? Colors.black : Colors.white,
                         shape: BoxShape.circle,
                         border: Border.all(width: 1, color: Colors.black)),
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
@@ -353,13 +353,13 @@ class _SearchPageState extends State<SearchPage> {
                 );
               }),
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
               decoration: BoxDecoration(
                   border: Border.all(color: Colors.grey, width: 1.5),
                   borderRadius: BorderRadius.circular(30)),
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(
@@ -379,7 +379,7 @@ class _SearchPageState extends State<SearchPage> {
                 ],
               ),
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             Wrap(
               spacing: 10,
               runSpacing: 10,
@@ -388,7 +388,7 @@ class _SearchPageState extends State<SearchPage> {
                 return GestureDetector(
                   onTap: () {},
                   child: Container(
-                    padding: EdgeInsets.all(15),
+                    padding: const EdgeInsets.all(15),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(24),
                       border: Border.all(width: 1, color: Colors.grey),
@@ -397,10 +397,10 @@ class _SearchPageState extends State<SearchPage> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Text(discount),
-                        SizedBox(
+                        const SizedBox(
                           width: 20,
                         ),
-                        Icon(
+                        const Icon(
                           Icons.close,
                           size: 16,
                         )
@@ -410,24 +410,24 @@ class _SearchPageState extends State<SearchPage> {
                 );
               }).toList(),
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 GestureDetector(
-                  child: Text(
+                  child: const Text(
                     "Reset",
                     style: TextStyle(fontSize: 18),
                   ),
                 ),
                 GestureDetector(
                   child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+                    padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
                     decoration: BoxDecoration(
-                      color: Color(0xFF33302E),
+                      color: const Color(0xFF33302E),
                       borderRadius: BorderRadius.circular(30),
                     ),
-                    child: Center(
+                    child: const Center(
                         child: Text(
                       "Apply",
                       style: TextStyle(

@@ -20,7 +20,7 @@ class OrderDetailDeliveredPage extends StatelessWidget {
           child: GestureDetector(
             onTap: () {},
             child: Container(
-              padding: EdgeInsets.only(left: 10),
+              padding: const EdgeInsets.only(left: 10),
               height: 40,
               width: 40,
               decoration: BoxDecoration(
@@ -31,11 +31,11 @@ class OrderDetailDeliveredPage extends StatelessWidget {
                     color: Colors.black.withOpacity(0.1),
                     blurRadius: 10,
                     spreadRadius: 1,
-                    offset: Offset(0, 4),
+                    offset: const Offset(0, 4),
                   ),
                 ],
               ),
-              child: Icon(Icons.arrow_back_ios, color: Colors.black),
+              child: const Icon(Icons.arrow_back_ios, color: Colors.black),
             ),
           ),
         ),
@@ -53,11 +53,11 @@ class OrderDetailDeliveredPage extends StatelessWidget {
               width: double.infinity,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Color(0xFF575757)),
+                  color: const Color(0xFF575757)),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Column(
+                  const Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
@@ -81,7 +81,7 @@ class OrderDetailDeliveredPage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 26),
+            const SizedBox(height: 26),
             Container(
               height: 114,
               width: double.infinity,
@@ -93,7 +93,7 @@ class OrderDetailDeliveredPage extends StatelessWidget {
                       color: Colors.black.withOpacity(0.1),
                       blurRadius: 10,
                       spreadRadius: 1,
-                      offset: Offset(0, 4),
+                      offset: const Offset(0, 4),
                     ),
                   ]),
               child: Padding(
@@ -103,7 +103,7 @@ class OrderDetailDeliveredPage extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
+                        const Text(
                           "Order number",
                           style: TextStyle(
                             fontWeight: FontWeight.w400,
@@ -112,19 +112,19 @@ class OrderDetailDeliveredPage extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          "\#${order.orderId}",
-                          style: TextStyle(
+                          "#${order.orderId}",
+                          style: const TextStyle(
                               fontWeight: FontWeight.w400,
                               fontSize: 12,
                               color: Colors.black),
                         ),
                       ],
                     ),
-                    SizedBox(height: 13),
+                    const SizedBox(height: 13),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
+                        const Text(
                           "Tracking number",
                           style: TextStyle(
                             fontWeight: FontWeight.w400,
@@ -133,16 +133,16 @@ class OrderDetailDeliveredPage extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          "\#${order.trackingNumber}",
-                          style: TextStyle(
+                          "#${order.trackingNumber}",
+                          style: const TextStyle(
                               fontWeight: FontWeight.w400,
                               fontSize: 12,
                               color: Colors.black),
                         ),
                       ],
                     ),
-                    SizedBox(height: 13),
-                    Row(
+                    const SizedBox(height: 13),
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
@@ -166,7 +166,7 @@ class OrderDetailDeliveredPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 41),
+            const SizedBox(height: 41),
             Container(
               height: 260,
               width: double.infinity,
@@ -178,11 +178,11 @@ class OrderDetailDeliveredPage extends StatelessWidget {
                       color: Colors.black.withOpacity(0.1),
                       blurRadius: 10,
                       spreadRadius: 1,
-                      offset: Offset(0, 4),
+                      offset: const Offset(0, 4),
                     ),
                   ]),
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(12, 13, 12, 0),
+              child: const Padding(
+                padding: EdgeInsets.fromLTRB(12, 13, 12, 0),
                 child: Column(
                   children: [
                     Row(
@@ -300,7 +300,7 @@ class OrderDetailDeliveredPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 11),
               child: Row(
@@ -313,7 +313,7 @@ class OrderDetailDeliveredPage extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => MainPage()));
+                                builder: (context) => const MainPage()));
                       },
                       color: Colors.white,
                       isBorder: true,
@@ -321,7 +321,7 @@ class OrderDetailDeliveredPage extends StatelessWidget {
                       borderColor: Colors.black,
                     ),
                   ),
-                  SizedBox(width: 20),
+                  const SizedBox(width: 20),
                   Expanded(
                     flex: 2,
                     child: CustomButton(
@@ -330,9 +330,9 @@ class OrderDetailDeliveredPage extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => RateOrderPage()));
+                                  builder: (context) => const RateOrderPage()));
                         },
-                        color: Color(0xFF343434)),
+                        color: const Color(0xFF343434)),
                   ),
                 ],
               ),

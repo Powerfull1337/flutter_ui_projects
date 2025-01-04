@@ -53,8 +53,8 @@ class GridItemsTwoInRow extends StatelessWidget {
                   right: 8,
                   child: GestureDetector(
                     child: Container(
-                      padding: EdgeInsets.all(5),
-                      decoration: BoxDecoration(
+                      padding: const EdgeInsets.all(5),
+                      decoration: const BoxDecoration(
                           shape: BoxShape.circle, color: Colors.white),
                       child: Icon(
                         Icons.favorite,
@@ -66,7 +66,7 @@ class GridItemsTwoInRow extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8),
               child: Text(

@@ -18,7 +18,7 @@ class TrackOrderPage extends StatelessWidget {
           child: GestureDetector(
             onTap: () {},
             child: Container(
-              padding: EdgeInsets.only(left: 10),
+              padding: const EdgeInsets.only(left: 10),
               height: 40,
               width: 40,
               decoration: BoxDecoration(
@@ -29,18 +29,18 @@ class TrackOrderPage extends StatelessWidget {
                     color: Colors.black.withOpacity(0.1),
                     blurRadius: 10,
                     spreadRadius: 1,
-                    offset: Offset(0, 4),
+                    offset: const Offset(0, 4),
                   ),
                 ],
               ),
-              child: Icon(Icons.arrow_back_ios, color: Colors.black),
+              child: const Icon(Icons.arrow_back_ios, color: Colors.black),
             ),
           ),
         ),
         backgroundColor: Colors.white,
         toolbarHeight: 100,
         centerTitle: true,
-        title: Text(
+        title: const Text(
           "Track order",
           style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
         ),
@@ -50,9 +50,9 @@ class TrackOrderPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 51),
+            const SizedBox(height: 51),
             RichText(
-              text: TextSpan(
+              text: const TextSpan(
                   text: "Delivered on ",
                   style: TextStyle(color: Colors.grey),
                   children: [
@@ -60,18 +60,18 @@ class TrackOrderPage extends StatelessWidget {
                         text: "15.05.21", style: TextStyle(color: Colors.black))
                   ]),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             RichText(
               text: TextSpan(
                   text: "Tracking Number: ",
-                  style: TextStyle(color: Colors.grey),
+                  style: const TextStyle(color: Colors.grey),
                   children: [
                     TextSpan(
-                        text: "${order.trackingNumber}",
-                        style: TextStyle(color: Colors.black))
+                        text: order.trackingNumber,
+                        style: const TextStyle(color: Colors.black))
                   ]),
             ),
-            SizedBox(height: 43),
+            const SizedBox(height: 43),
             SizedBox(
               height: 350,
               child: ListView.builder(
@@ -86,7 +86,7 @@ class TrackOrderPage extends StatelessWidget {
                 },
               ),
             ),
-            SizedBox(height: 58),
+            const SizedBox(height: 58),
             Container(
               height: 100,
               width: double.infinity,
@@ -98,37 +98,37 @@ class TrackOrderPage extends StatelessWidget {
                     color: Colors.black.withOpacity(0.1),
                     blurRadius: 10,
                     spreadRadius: 1,
-                    offset: Offset(0, 4),
+                    offset: const Offset(0, 4),
                   ),
                 ],
               ),
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                 child: Row(
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.star_border,
                       size: 60,
                       color: Colors.grey,
                     ),
-                    SizedBox(width: 25),
+                    const SizedBox(width: 25),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
+                        const Text(
                           "Don`t forget to rate",
                           style: TextStyle(
                               fontSize: 12, fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(height: 10),
-                        Text(
+                        const SizedBox(height: 10),
+                        const Text(
                           "Rate product to get 5 points for collect",
                           style: TextStyle(
                               fontSize: 10,
                               fontWeight: FontWeight.w300,
                               color: Colors.grey),
                         ),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         Row(
                           children: [
                             ...List.generate(

@@ -11,18 +11,18 @@ class Type {
 List<Type> listOfTypes = [
   Type(
       name: "CLOTHING",
-      color: Color(0xFFA3A798),
+      color: const Color(0xFFA3A798),
       imagePath: "assets/images/main/woman without bg 1.png"),
   Type(
       name: "ACCESSORIES",
-      color: Color(0xFF898280),
+      color: const Color(0xFF898280),
       imagePath: "assets/images/main/woman without bg 2.png"),
   Type(
       name: "SHOES",
-      color: Color(0xFF44565C),
+      color: const Color(0xFF44565C),
       imagePath: "assets/images/main/woman without bg 3.png"),
   Type(
       name: "COLLECTION",
-      color: Color(0xFFB9AEB2),
+      color: const Color(0xFFB9AEB2),
       imagePath: "assets/images/main/woman without bg 1.png")
 ];

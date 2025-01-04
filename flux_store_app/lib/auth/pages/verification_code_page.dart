@@ -32,13 +32,13 @@ class _VerificationCodePageState extends State<VerificationCodePage> {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
                         border: Border.all(width: 0.5, color: Colors.grey)),
-                    child: Center(child: Icon(Icons.arrow_back)),
+                    child: const Center(child: Icon(Icons.arrow_back)),
                   ),
                 ),
               ],
             ),
-            SizedBox(height: 40),
-            Align(
+            const SizedBox(height: 40),
+            const Align(
               alignment: Alignment.centerLeft,
               child: Text(
                 "Verification code",
@@ -48,8 +48,8 @@ class _VerificationCodePageState extends State<VerificationCodePage> {
                     fontWeight: FontWeight.bold),
               ),
             ),
-            SizedBox(height: 20),
-            Align(
+            const SizedBox(height: 20),
+            const Align(
               alignment: Alignment.centerLeft,
               child: Text(
                 "Please enter the verification code we sent to your email address",
@@ -59,7 +59,7 @@ class _VerificationCodePageState extends State<VerificationCodePage> {
                     fontWeight: FontWeight.w400),
               ),
             ),
-            SizedBox(height: 60),
+            const SizedBox(height: 60),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: List.generate(4, (index) {
@@ -89,14 +89,14 @@ class _VerificationCodePageState extends State<VerificationCodePage> {
               }),
             ),
             const SizedBox(height: 30),
-            Align(
+            const Align(
               alignment: Alignment.centerLeft,
-              child: const Text(
+              child: Text(
                 "Resend in 00:10",
                 style: TextStyle(color: Colors.grey),
               ),
             ),
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             //Button for change password page
             CustomButton(
               text: "Go to change",
@@ -104,7 +104,7 @@ class _VerificationCodePageState extends State<VerificationCodePage> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => ChangePasswordPage()));
+                        builder: (context) => const ChangePasswordPage()));
               },
             )
           ],
