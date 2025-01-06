@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mbooking_app/app_color.dart';
-import 'package:mbooking_app/main/main_page.dart';
+import 'package:mbooking_app/main/pages/main_page.dart';
 import 'package:mbooking_app/navigator.dart';
 import 'package:mbooking_app/widgets/custom_button.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
@@ -23,7 +23,7 @@ class _VerifyOtpPageState extends State<VerifyOtpPage> {
   }
 
   void startTimer() {
-    Future.delayed(Duration(seconds: 1), () {
+    Future.delayed(const Duration(seconds: 1), () {
       if (remainingSeconds > 0) {
         setState(() {
           remainingSeconds--;
@@ -43,7 +43,7 @@ class _VerifyOtpPageState extends State<VerifyOtpPage> {
           onTap: () {
             NavigationService().pop();
           },
-          child: Icon(
+          child: const Icon(
             Icons.arrow_back_sharp,
             size: 40,
             color: Colors.white,
@@ -55,28 +55,28 @@ class _VerifyOtpPageState extends State<VerifyOtpPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 56),
-            Text(
+            const SizedBox(height: 56),
+            const Text(
               "Confirm OTP code",
               style: TextStyle(
                   fontSize: 32,
                   fontWeight: FontWeight.bold,
                   color: AppColor.primaryOrangeColor),
             ),
-            SizedBox(height: 32),
-            Text(
+            const SizedBox(height: 32),
+            const Text(
               "You just need to enter the OTP sent to the registered phone number (704) 555-0127.",
               style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.w400,
                   color: Color(0xFFF2F2F2)),
             ),
-            SizedBox(height: 48),
+            const SizedBox(height: 48),
             PinCodeTextField(
               controller: otpController,
               appContext: context,
               length: 6,
-              textStyle: TextStyle(color: Colors.white),
+              textStyle: const TextStyle(color: Colors.white),
               animationType: AnimationType.fade,
               enableActiveFill: true,
               pinTheme: PinTheme(
@@ -85,30 +85,33 @@ class _VerifyOtpPageState extends State<VerifyOtpPage> {
                 fieldHeight: 72,
                 fieldWidth: 52,
                 activeColor: AppColor.primaryOrangeColor,
-                activeFillColor: Color(0xFF261D08),
+                activeFillColor: const Color(0xFF261D08),
                 inactiveColor: AppColor.primaryOrangeColor,
-                inactiveFillColor: Color(0xFF261D08),
+                inactiveFillColor: const Color(0xFF261D08),
                 selectedColor: AppColor.primaryOrangeColor,
-                selectedFillColor: Color(0xFF261D08),
+                selectedFillColor: const Color(0xFF261D08),
               ),
               keyboardType: TextInputType.number,
               onChanged: (value) {
-                print(value);
+ 
               },
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Align(
               alignment: Alignment.centerRight,
               child: Text(
                 '00:${remainingSeconds.toString().padLeft(2, '0')}',
-                style: TextStyle(color: Colors.white, fontSize: 18),
+                style: const TextStyle(color: Colors.white, fontSize: 18),
               ),
             ),
-            Spacer(),
-            CustomButton(text: "Continue", onTap: () {
-            NavigationService().push(MainPage ());
-          }, ),
-            SizedBox(height: 16),
+            const Spacer(),
+            CustomButton(
+              text: "Continue",
+              onTap: () {
+                NavigationService().push(const MainPage());
+              },
+            ),
+            const SizedBox(height: 16),
           ],
         ),
       ),

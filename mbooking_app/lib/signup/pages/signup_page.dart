@@ -16,13 +16,13 @@ class SignupPage extends StatelessWidget {
           onTap: () {
             NavigationService().pop();
           },
-          child: Icon(
+          child: const Icon(
             Icons.arrow_back_sharp,
             size: 40,
             color: Colors.white,
           ),
         ),
-        title: Text(
+        title: const Text(
           "Sign Up",
           style: TextStyle(
               fontSize: 28, fontWeight: FontWeight.bold, color: Colors.white),
@@ -33,17 +33,17 @@ class SignupPage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Column(
           children: [
-            SizedBox(height: 48),
+            const SizedBox(height: 48),
             _buildSignUpTextField(),
-            SizedBox(height: 32),
+            const SizedBox(height: 32),
             CustomButton(
               text: "Continue",
               onTap: () {
-                NavigationService().push(VerifyOtpPage());
+                NavigationService().push(const VerifyOtpPage());
               },
             ),
-            Spacer(),
-            Row(
+            const Spacer(),
+            const Row(
               children: [
                 Expanded(
                   child: Divider(
@@ -52,7 +52,7 @@ class SignupPage extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  padding: EdgeInsets.symmetric(horizontal: 8.0),
                   child: Text('Or continue with',
                       style: TextStyle(color: Colors.white70)),
                 ),
@@ -64,14 +64,14 @@ class SignupPage extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 40),
-            _SignupSocialButton(
+            const SizedBox(height: 40),
+            const _SignupSocialButton(
                 text: "Facebook", imagePath: 'assets/images/facebook.png'),
-            SizedBox(height: 16),
-            _SignupSocialButton(
+            const SizedBox(height: 16),
+            const _SignupSocialButton(
                 text: "Google", imagePath: 'assets/images/google.png'),
-            SizedBox(height: 40),
-            Text(
+            const SizedBox(height: 40),
+            const Text(
               "By sign in or sign up, you agree to our Terms of Service and Privacy Policy",
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -85,7 +85,7 @@ class SignupPage extends StatelessWidget {
     );
   }
 
-  TextField _buildSignUpTextField() => TextField(
+  TextField _buildSignUpTextField() => const TextField(
         decoration: InputDecoration(
           contentPadding: EdgeInsets.symmetric(vertical: 12.0),
           prefixIcon: Icon(
@@ -126,7 +126,7 @@ class _SignupSocialButton extends StatelessWidget {
         width: double.infinity,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(64),
-          color: Color(0xFF1A1A1A),
+          color: const Color(0xFF1A1A1A),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -136,10 +136,10 @@ class _SignupSocialButton extends StatelessWidget {
               height: 15,
               width: 15,
             ),
-            SizedBox(width: 10),
+            const SizedBox(width: 10),
             Text(
               text,
-              style: TextStyle(
+              style: const TextStyle(
                   fontSize: 20,
                   color: Colors.white,
                   fontWeight: FontWeight.bold),

@@ -2,18 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:mbooking_app/app_color.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton(
-      {super.key,
-      this.color = AppColor.primaryOrangeColor,
-      this.colorText = Colors.black,
-      this.isBorder = false,
-      required this.text,
-      this.onTap});
+  CustomButton({
+    super.key,
+    this.color = AppColor.primaryOrangeColor,
+    this.colorText = Colors.black,
+    this.isBorder = false,
+    required this.text,
+    this.onTap,
+    BorderRadiusGeometry? borderRadius,
+  }) : borderRadius = borderRadius ?? BorderRadius.circular(64);
 
   final String text;
   final Color color;
   final Color colorText;
   final bool isBorder;
+  final BorderRadiusGeometry borderRadius;
   final Function()? onTap;
 
   @override
@@ -21,10 +24,10 @@ class CustomButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: 56,
+        height: 50,
         width: double.infinity,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(64),
+          borderRadius: borderRadius,
           color: color,
           border: isBorder ? Border.all(color: Colors.white) : null,
         ),

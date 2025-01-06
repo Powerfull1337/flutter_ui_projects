@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:mbooking_app/app_color.dart';
-import 'package:mbooking_app/main/home_page.dart';
+import 'package:mbooking_app/main/pages/home_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -47,13 +47,13 @@ class _MainPageState extends State<MainPage> {
         borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
         child: BottomNavigationBar(
           onTap: _selectPage,
-          unselectedItemColor: Color(0xFFCCCCCC),
+          unselectedItemColor: const Color(0xFFCCCCCC),
           currentIndex: _selectedPageIndex,
           selectedItemColor: AppColor.primaryOrangeColor,
-          backgroundColor: Color(0xFF262626),
+          backgroundColor: const Color(0xFF262626),
           showUnselectedLabels: true,
           type: BottomNavigationBarType.fixed,
-          items: [
+          items: const [
             BottomNavigationBarItem(icon: Icon(Iconsax.home), label: "Home"),
             BottomNavigationBarItem(
                 icon: Icon(Iconsax.ticket), label: "Ticket"),

@@ -30,9 +30,9 @@ class _SignupOrSigninPageState extends State<SignupOrSigninPage> {
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             children: [
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               _buildAppBar(context),
-              SizedBox(height: 80),
+              const SizedBox(height: 80),
               SizedBox(
                 height: 350,
                 child: PageView.builder(
@@ -85,13 +85,13 @@ class _SignupOrSigninPageState extends State<SignupOrSigninPage> {
                 ),
               ),
               const SizedBox(height: 20),
-              CustomButton(
+               CustomButton(
                 text: "Sign In",
               ),
               const SizedBox(height: 16),
               CustomButton(
                 onTap: () {
-                  NavigationService().push(SignupPage());
+                  NavigationService().push(const SignupPage());
                 },
                 text: "Sign Up",
                 isBorder: true,
@@ -118,34 +118,33 @@ class _SignupOrSigninPageState extends State<SignupOrSigninPage> {
 
   Row _buildAppBar(BuildContext context) {
     return Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Image.asset('assets/images/logo.png'),
+        GestureDetector(
+          onTap: () {
+            _buildShowBottomSheetSelectLanguage(context);
+          },
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+            decoration: BoxDecoration(
+              border: Border.all(color: const Color(0xFFE6E6E6)),
+              borderRadius: BorderRadius.circular(30),
+            ),
+            child: Row(
               children: [
-                Image.asset('assets/images/logo.png'),
-                GestureDetector(
-                  onTap: () {
-                    _buildShowBottomSheetSelectLanguage(context);
-                  },
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 5, vertical: 5),
-                    decoration: BoxDecoration(
-                      border: Border.all(color: const Color(0xFFE6E6E6)),
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                    child: Row(
-                      children: [
-                        const Icon(Icons.translate, color: Color(0xFFE6E6E6)),
-                        const SizedBox(width: 5),
-                        Text(
-                          selectedLanguage,
-                          style: const TextStyle(color: Color(0xFFE6E6E6)),
-                        ),
-                      ],
-                    ),
-                  ),
+                const Icon(Icons.translate, color: Color(0xFFE6E6E6)),
+                const SizedBox(width: 5),
+                Text(
+                  selectedLanguage,
+                  style: const TextStyle(color: Color(0xFFE6E6E6)),
                 ),
               ],
-            );
+            ),
+          ),
+        ),
+      ],
+    );
   }
 
   Future<dynamic> _buildShowBottomSheetSelectLanguage(BuildContext context) {
@@ -214,7 +213,7 @@ class _SignupOrSigninPageState extends State<SignupOrSigninPage> {
                         ),
                       ),
                     ),
-                    Divider(color: Colors.white54, height: 0.1),
+                    const Divider(color: Colors.white54, height: 0.1),
                     ListTile(
                       contentPadding: EdgeInsets.zero,
                       title: Text(
