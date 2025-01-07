@@ -45,6 +45,10 @@ dependencies:
   mobkit_dashed_border: ^0.0.7
   awesome_card: ^1.1.7
   pin_code_fields: ^8.0.1
+  qr: ^3.0.2
+  barcode: ^2.2.8
+  image: ^4.5.2
+  flutter_svg: ^2.0.16
 
 dev_dependencies:
   flutter_test:

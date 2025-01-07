@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:mbooking_app/app_color.dart';
 import 'package:mbooking_app/main/pages/home_page.dart';
+import 'package:mbooking_app/main/pages/movie_page.dart';
+import 'package:mbooking_app/main/pages/my_tickets_page.dart';
+import 'package:mbooking_app/main/pages/profile_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -32,15 +35,9 @@ class _MainPageState extends State<MainPage> {
         },
         children: const [
           HomePage(),
-          Center(
-            child: Text("data"),
-          ),
-          Center(
-            child: Text("data"),
-          ),
-          Center(
-            child: Text("data"),
-          ),
+          MyTicketsPage(),
+          MoviePage(),
+          ProfilePage(),
         ],
       ),
       bottomNavigationBar: ClipRRect(

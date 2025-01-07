@@ -331,7 +331,7 @@ class _PaymentPageState extends State<PaymentPage> {
                 CustomButton(
                   text: "Continue",
                   onTap: () {
-                    NavigationService().push(const TicketPage());
+                    NavigationService().push( TicketPage(film: widget.film,));
                   },
                 )
               ],
